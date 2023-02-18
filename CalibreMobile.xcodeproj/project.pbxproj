@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FC51EDE29A0839400224109 /* CalibreMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */; };
+		3FC51EE029A0839400224109 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EDF29A0839400224109 /* Persistence.swift */; };
+		3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EE129A0839400224109 /* CalibreMobile.xcdatamodeld */; };
+		3FC51EE529A0839400224109 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EE429A0839400224109 /* ContentView.swift */; };
+		3FC51EE729A0839500224109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC51EE629A0839500224109 /* Assets.xcassets */; };
+		3FC51EEB29A0839500224109 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC51EEA29A0839500224109 /* Preview Assets.xcassets */; };
+		3FC51EF529A0839500224109 /* CalibreMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EF429A0839500224109 /* CalibreMobileTests.swift */; };
+		3FC51EFF29A0839500224109 /* CalibreMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EFE29A0839500224109 /* CalibreMobileUITests.swift */; };
+		3FC51F0129A0839500224109 /* CalibreMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F0029A0839500224109 /* CalibreMobileUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FC51EF129A0839500224109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FC51ED229A0839400224109 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FC51ED929A0839400224109;
+			remoteInfo = CalibreMobile;
+		};
+		3FC51EFB29A0839500224109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FC51ED229A0839400224109 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FC51ED929A0839400224109;
+			remoteInfo = CalibreMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FC51EDA29A0839400224109 /* CalibreMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalibreMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreMobileApp.swift; sourceTree = "<group>"; };
+		3FC51EDF29A0839400224109 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3FC51EE229A0839400224109 /* CalibreMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalibreMobile.xcdatamodel; sourceTree = "<group>"; };
+		3FC51EE429A0839400224109 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3FC51EE629A0839500224109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FC51EE829A0839500224109 /* CalibreMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalibreMobile.entitlements; sourceTree = "<group>"; };
+		3FC51EEA29A0839500224109 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FC51EF029A0839500224109 /* CalibreMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalibreMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC51EF429A0839500224109 /* CalibreMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreMobileTests.swift; sourceTree = "<group>"; };
+		3FC51EFA29A0839500224109 /* CalibreMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalibreMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC51EFE29A0839500224109 /* CalibreMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreMobileUITests.swift; sourceTree = "<group>"; };
+		3FC51F0029A0839500224109 /* CalibreMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FC51ED729A0839400224109 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC51EED29A0839500224109 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC51EF729A0839500224109 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FC51ED129A0839400224109 = {
+			isa = PBXGroup;
+			children = (
+				3FC51EDC29A0839400224109 /* CalibreMobile */,
+				3FC51EF329A0839500224109 /* CalibreMobileTests */,
+				3FC51EFD29A0839500224109 /* CalibreMobileUITests */,
+				3FC51EDB29A0839400224109 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FC51EDB29A0839400224109 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FC51EDA29A0839400224109 /* CalibreMobile.app */,
+				3FC51EF029A0839500224109 /* CalibreMobileTests.xctest */,
+				3FC51EFA29A0839500224109 /* CalibreMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FC51EDC29A0839400224109 /* CalibreMobile */ = {
+			isa = PBXGroup;
+			children = (
+				3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */,
+				3FC51EDF29A0839400224109 /* Persistence.swift */,
+				3FC51EE429A0839400224109 /* ContentView.swift */,
+				3FC51EE629A0839500224109 /* Assets.xcassets */,
+				3FC51EE829A0839500224109 /* CalibreMobile.entitlements */,
+				3FC51EE129A0839400224109 /* CalibreMobile.xcdatamodeld */,
+				3FC51EE929A0839500224109 /* Preview Content */,
+			);
+			path = CalibreMobile;
+			sourceTree = "<group>";
+		};
+		3FC51EE929A0839500224109 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3FC51EEA29A0839500224109 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FC51EF329A0839500224109 /* CalibreMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC51EF429A0839500224109 /* CalibreMobileTests.swift */,
+			);
+			path = CalibreMobileTests;
+			sourceTree = "<group>";
+		};
+		3FC51EFD29A0839500224109 /* CalibreMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FC51EFE29A0839500224109 /* CalibreMobileUITests.swift */,
+				3FC51F0029A0839500224109 /* CalibreMobileUITestsLaunchTests.swift */,
+			);
+			path = CalibreMobileUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FC51ED929A0839400224109 /* CalibreMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC51F0429A0839500224109 /* Build configuration list for PBXNativeTarget "CalibreMobile" */;
+			buildPhases = (
+				3FC51ED629A0839400224109 /* Sources */,
+				3FC51ED729A0839400224109 /* Frameworks */,
+				3FC51ED829A0839400224109 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalibreMobile;
+			productName = CalibreMobile;
+			productReference = 3FC51EDA29A0839400224109 /* CalibreMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FC51EEF29A0839500224109 /* CalibreMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC51F0729A0839500224109 /* Build configuration list for PBXNativeTarget "CalibreMobileTests" */;
+			buildPhases = (
+				3FC51EEC29A0839500224109 /* Sources */,
+				3FC51EED29A0839500224109 /* Frameworks */,
+				3FC51EEE29A0839500224109 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FC51EF229A0839500224109 /* PBXTargetDependency */,
+			);
+			name = CalibreMobileTests;
+			productName = CalibreMobileTests;
+			productReference = 3FC51EF029A0839500224109 /* CalibreMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FC51EF929A0839500224109 /* CalibreMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC51F0A29A0839500224109 /* Build configuration list for PBXNativeTarget "CalibreMobileUITests" */;
+			buildPhases = (
+				3FC51EF629A0839500224109 /* Sources */,
+				3FC51EF729A0839500224109 /* Frameworks */,
+				3FC51EF829A0839500224109 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FC51EFC29A0839500224109 /* PBXTargetDependency */,
+			);
+			name = CalibreMobileUITests;
+			productName = CalibreMobileUITests;
+			productReference = 3FC51EFA29A0839500224109 /* CalibreMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FC51ED229A0839400224109 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3FC51ED929A0839400224109 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					3FC51EEF29A0839500224109 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3FC51ED929A0839400224109;
+					};
+					3FC51EF929A0839500224109 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3FC51ED929A0839400224109;
+					};
+				};
+			};
+			buildConfigurationList = 3FC51ED529A0839400224109 /* Build configuration list for PBXProject "CalibreMobile" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FC51ED129A0839400224109;
+			productRefGroup = 3FC51EDB29A0839400224109 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FC51ED929A0839400224109 /* CalibreMobile */,
+				3FC51EEF29A0839500224109 /* CalibreMobileTests */,
+				3FC51EF929A0839500224109 /* CalibreMobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FC51ED829A0839400224109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC51EEB29A0839500224109 /* Preview Assets.xcassets in Resources */,
+				3FC51EE729A0839500224109 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC51EEE29A0839500224109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC51EF829A0839500224109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FC51ED629A0839400224109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC51EDE29A0839400224109 /* CalibreMobileApp.swift in Sources */,
+				3FC51EE029A0839400224109 /* Persistence.swift in Sources */,
+				3FC51EE529A0839400224109 /* ContentView.swift in Sources */,
+				3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC51EEC29A0839500224109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC51EF529A0839500224109 /* CalibreMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FC51EF629A0839500224109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC51EFF29A0839500224109 /* CalibreMobileUITests.swift in Sources */,
+				3FC51F0129A0839500224109 /* CalibreMobileUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FC51EF229A0839500224109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FC51ED929A0839400224109 /* CalibreMobile */;
+			targetProxy = 3FC51EF129A0839500224109 /* PBXContainerItemProxy */;
+		};
+		3FC51EFC29A0839500224109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FC51ED929A0839400224109 /* CalibreMobile */;
+			targetProxy = 3FC51EFB29A0839500224109 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3FC51F0229A0839500224109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FC51F0329A0839500224109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3FC51F0529A0839500224109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CalibreMobile/CalibreMobile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CalibreMobile/Preview Content\"";
+				DEVELOPMENT_TEAM = N22PJBS26Y;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.CalibreMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FC51F0629A0839500224109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CalibreMobile/CalibreMobile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CalibreMobile/Preview Content\"";
+				DEVELOPMENT_TEAM = N22PJBS26Y;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.CalibreMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3FC51F0829A0839500224109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N22PJBS26Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.CalibreMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CalibreMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CalibreMobile";
+			};
+			name = Debug;
+		};
+		3FC51F0929A0839500224109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N22PJBS26Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.CalibreMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CalibreMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CalibreMobile";
+			};
+			name = Release;
+		};
+		3FC51F0B29A0839500224109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N22PJBS26Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.CalibreMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CalibreMobile;
+			};
+			name = Debug;
+		};
+		3FC51F0C29A0839500224109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N22PJBS26Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.CalibreMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CalibreMobile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FC51ED529A0839400224109 /* Build configuration list for PBXProject "CalibreMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC51F0229A0839500224109 /* Debug */,
+				3FC51F0329A0839500224109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC51F0429A0839500224109 /* Build configuration list for PBXNativeTarget "CalibreMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC51F0529A0839500224109 /* Debug */,
+				3FC51F0629A0839500224109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC51F0729A0839500224109 /* Build configuration list for PBXNativeTarget "CalibreMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC51F0829A0839500224109 /* Debug */,
+				3FC51F0929A0839500224109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC51F0A29A0839500224109 /* Build configuration list for PBXNativeTarget "CalibreMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC51F0B29A0839500224109 /* Debug */,
+				3FC51F0C29A0839500224109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3FC51EE129A0839400224109 /* CalibreMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3FC51EE229A0839400224109 /* CalibreMobile.xcdatamodel */,
+			);
+			currentVersion = 3FC51EE229A0839400224109 /* CalibreMobile.xcdatamodel */;
+			path = CalibreMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3FC51ED229A0839400224109 /* Project object */;
+}
