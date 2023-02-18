@@ -16,6 +16,7 @@
 		3FC51EF529A0839500224109 /* CalibreMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EF429A0839500224109 /* CalibreMobileTests.swift */; };
 		3FC51EFF29A0839500224109 /* CalibreMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EFE29A0839500224109 /* CalibreMobileUITests.swift */; };
 		3FC51F0129A0839500224109 /* CalibreMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F0029A0839500224109 /* CalibreMobileUITestsLaunchTests.swift */; };
+		3FC51F1129A0F59600224109 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3FC51F1029A0F59600224109 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC51F1129A0F59600224109 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +153,9 @@
 			dependencies = (
 			);
 			name = CalibreMobile;
+			packageProductDependencies = (
+				3FC51F1029A0F59600224109 /* Alamofire */,
+			);
 			productName = CalibreMobile;
 			productReference = 3FC51EDA29A0839400224109 /* CalibreMobile.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 3FC51ED129A0839400224109;
+			packageReferences = (
+				3FC51F0F29A0F59600224109 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3FC51EDB29A0839400224109 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -620,6 +628,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FC51F0F29A0F59600224109 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FC51F1029A0F59600224109 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FC51F0F29A0F59600224109 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3FC51EE129A0839400224109 /* CalibreMobile.xcdatamodeld */ = {
