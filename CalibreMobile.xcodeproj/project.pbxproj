@@ -26,6 +26,7 @@
 		3FC51F2129A1EEE200224109 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2029A1EEE100224109 /* ViewModel.swift */; };
 		3FC51F2329A2086800224109 /* CalibreServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2229A2086800224109 /* CalibreServerView.swift */; };
 		3FC51F2529A2375300224109 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2429A2375300224109 /* BookDetailView.swift */; };
+		3FC51F2729A2535300224109 /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2629A2535300224109 /* Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		3FC51F2029A1EEE100224109 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3FC51F2229A2086800224109 /* CalibreServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreServerView.swift; sourceTree = "<group>"; };
 		3FC51F2429A2375300224109 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		3FC51F2629A2535300224109 /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				3FC51F1E29A1DC6D00224109 /* SettingView.swift */,
 				3FC51F2029A1EEE100224109 /* ViewModel.swift */,
 				3FC51F2229A2086800224109 /* CalibreServerView.swift */,
+				3FC51F2629A2535300224109 /* Ex.swift */,
 			);
 			path = CalibreMobile;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				3FC51F2529A2375300224109 /* BookDetailView.swift in Sources */,
 				3FC51F1F29A1DC6E00224109 /* SettingView.swift in Sources */,
 				3FC51EE529A0839400224109 /* ContentView.swift in Sources */,
+				3FC51F2729A2535300224109 /* Ex.swift in Sources */,
 				3FC51F2329A2086800224109 /* CalibreServerView.swift in Sources */,
 				3FC51F1629A1D49B00224109 /* Model.swift in Sources */,
 				3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */,

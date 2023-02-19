@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct BookDetailView: View {
     let book: Book
@@ -29,7 +30,11 @@ struct BookDetailView: View {
                     Text("-- \(au)")
                 }
                 Text(book.publisher ?? "")
-                Text(book.comments ?? "")
+//                Text(book.comments ?? "")
+                HTMLView(htmlString: book.comments ?? "")
+                    .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+                
+                    
             }
             .padding()
         }
@@ -38,6 +43,36 @@ struct BookDetailView: View {
 
 struct BookDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailView(book: Book(id: "1", timestamp: "2023", title: "1234567890qwertyuiopkjhgfdsazxcvbnm,.1234567890-][poiiuytrreewwqqasdfghjkl;'/.,mnbvcxcz", coverURL: "http://192.168.31.60:8080/get/thumb/1/calibre?sz=600x800", formats: [],authors: ["abc"],tags: [],publisher: "123",comments: "1234567890"))
+        BookDetailView(book: Book(id: "1", timestamp: "2023", title: "1234567890qwertyuiopkjhgfdsazxcvbnm,.1234567890-][poiiuytrreewwqqasdfghjkl;'/.,mnbvcxcz", coverURL: "http://192.168.31.60:8080/get/thumb/1/calibre?sz=600x800", formats: [],authors: ["abc"],tags: [],publisher: "123",comments: "1234567890abcdf"))
+    }
+}
+//struct HTMLView: UIViewRepresentable {
+//    var htmlString: String
+//
+//    func makeUIView(context: Context) -> UITextView {
+//        return UITextView()
+//    }
+//
+//    func updateUIView(_ uiView: UITextView, context: Context) {
+//        do {
+//            let attributedString = try NSAttributedString(
+//                data: htmlString.data(using: .utf8)!,
+//                options: [.documentType: NSAttributedString.DocumentType.html],
+//                documentAttributes: nil)
+//            uiView.attributedText = attributedString
+//        } catch {
+//            print("Error: \(error)")
+//        }
+//    }
+//}
+struct HTMLView: UIViewRepresentable {
+    let htmlString: String
+
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
+    }
+
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        uiView.loadHTMLString(htmlString, baseURL: nil)
     }
 }
