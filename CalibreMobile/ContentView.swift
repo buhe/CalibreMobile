@@ -13,7 +13,7 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            BookView()
+            BooksView()
                 .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                 Label("Books", systemImage: "book")

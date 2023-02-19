@@ -16,6 +16,7 @@ struct Book: Identifiable {
     let comments: String?
     let timestamp: String
     let title: String
+    let coverURL: String
 }
 
 struct Model {

@@ -21,7 +21,7 @@
 		3FC51F1629A1D49B00224109 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1529A1D49B00224109 /* Model.swift */; };
 		3FC51F1929A1D82F00224109 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3FC51F1829A1D82F00224109 /* SwiftyJSON */; };
 		3FC51F1B29A1DC3A00224109 /* LibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1A29A1DC3A00224109 /* LibView.swift */; };
-		3FC51F1D29A1DC4F00224109 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1C29A1DC4F00224109 /* BookView.swift */; };
+		3FC51F1D29A1DC4F00224109 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1C29A1DC4F00224109 /* BooksView.swift */; };
 		3FC51F1F29A1DC6E00224109 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1E29A1DC6D00224109 /* SettingView.swift */; };
 		3FC51F2129A1EEE200224109 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2029A1EEE100224109 /* ViewModel.swift */; };
 		3FC51F2329A2086800224109 /* CalibreServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2229A2086800224109 /* CalibreServerView.swift */; };
@@ -61,7 +61,7 @@
 		3FC51F1329A1D3D400224109 /* CalibreSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreSDK.swift; sourceTree = "<group>"; };
 		3FC51F1529A1D49B00224109 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3FC51F1A29A1DC3A00224109 /* LibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibView.swift; sourceTree = "<group>"; };
-		3FC51F1C29A1DC4F00224109 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		3FC51F1C29A1DC4F00224109 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 		3FC51F1E29A1DC6D00224109 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		3FC51F2029A1EEE100224109 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3FC51F2229A2086800224109 /* CalibreServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreServerView.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 				3FC51EE929A0839500224109 /* Preview Content */,
 				3FC51F1529A1D49B00224109 /* Model.swift */,
 				3FC51F1A29A1DC3A00224109 /* LibView.swift */,
-				3FC51F1C29A1DC4F00224109 /* BookView.swift */,
+				3FC51F1C29A1DC4F00224109 /* BooksView.swift */,
 				3FC51F1E29A1DC6D00224109 /* SettingView.swift */,
 				3FC51F2029A1EEE100224109 /* ViewModel.swift */,
 				3FC51F2229A2086800224109 /* CalibreServerView.swift */,
@@ -316,7 +316,7 @@
 				3FC51F1629A1D49B00224109 /* Model.swift in Sources */,
 				3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */,
 				3FC51F1429A1D3D400224109 /* CalibreSDK.swift in Sources */,
-				3FC51F1D29A1DC4F00224109 /* BookView.swift in Sources */,
+				3FC51F1D29A1DC4F00224109 /* BooksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
