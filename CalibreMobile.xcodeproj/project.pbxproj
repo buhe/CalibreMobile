@@ -20,6 +20,9 @@
 		3FC51F1429A1D3D400224109 /* CalibreSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1329A1D3D400224109 /* CalibreSDK.swift */; };
 		3FC51F1629A1D49B00224109 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1529A1D49B00224109 /* Model.swift */; };
 		3FC51F1929A1D82F00224109 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3FC51F1829A1D82F00224109 /* SwiftyJSON */; };
+		3FC51F1B29A1DC3A00224109 /* LibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1A29A1DC3A00224109 /* LibView.swift */; };
+		3FC51F1D29A1DC4F00224109 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1C29A1DC4F00224109 /* BookView.swift */; };
+		3FC51F1F29A1DC6E00224109 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1E29A1DC6D00224109 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		3FC51F0029A0839500224109 /* CalibreMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3FC51F1329A1D3D400224109 /* CalibreSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreSDK.swift; sourceTree = "<group>"; };
 		3FC51F1529A1D49B00224109 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3FC51F1A29A1DC3A00224109 /* LibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibView.swift; sourceTree = "<group>"; };
+		3FC51F1C29A1DC4F00224109 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		3FC51F1E29A1DC6D00224109 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,9 @@
 				3FC51EE129A0839400224109 /* CalibreMobile.xcdatamodeld */,
 				3FC51EE929A0839500224109 /* Preview Content */,
 				3FC51F1529A1D49B00224109 /* Model.swift */,
+				3FC51F1A29A1DC3A00224109 /* LibView.swift */,
+				3FC51F1C29A1DC4F00224109 /* BookView.swift */,
+				3FC51F1E29A1DC6D00224109 /* SettingView.swift */,
 			);
 			path = CalibreMobile;
 			sourceTree = "<group>";
@@ -292,11 +301,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC51EDE29A0839400224109 /* CalibreMobileApp.swift in Sources */,
+				3FC51F1B29A1DC3A00224109 /* LibView.swift in Sources */,
 				3FC51EE029A0839400224109 /* Persistence.swift in Sources */,
+				3FC51F1F29A1DC6E00224109 /* SettingView.swift in Sources */,
 				3FC51EE529A0839400224109 /* ContentView.swift in Sources */,
 				3FC51F1629A1D49B00224109 /* Model.swift in Sources */,
 				3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */,
 				3FC51F1429A1D3D400224109 /* CalibreSDK.swift in Sources */,
+				3FC51F1D29A1DC4F00224109 /* BookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
