@@ -63,6 +63,7 @@ struct BookView: View {
                     .lineLimit(1)
             }
         }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 
