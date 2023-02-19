@@ -8,8 +8,39 @@
 import SwiftUI
 
 struct BookView: View {
+    @State var books: [Book] = []
+    @State var showCalibre = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List()  {
+                ForEach(books) {
+                    i in
+                    HStack {
+                        Image(systemName: "books.vertical")
+                        Text(i.title)
+                        
+                    }
+                    .padding(8)
+                }
+            }
+            .listStyle(PlainListStyle())
+            .task {
+                self.books =  await CalibreSDK().listBooks(by: "")
+            }
+            .navigationTitle("Book")
+            .toolbar{
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button{showCalibre = true}label: {
+                        Image(systemName:"0.circle")
+                    }
+                }
+            }
+            .sheet(isPresented: $showCalibre){
+                CalibreServerView()
+            }
+            
+        }
     }
 }
 

@@ -25,6 +25,20 @@ struct CalibreSDK {
     }
     
     func listBooks(by: String) async -> [Book] {
-        [Book()]
+        
+        var result: [Book] = []
+        let reps = try? await AF.request("http://192.168.31.60:8080/interface-data/books-init?library_id=calibre&sort=timestamp.desc").serializingString().value
+        print("call api.")
+        if let reps = reps {
+            let json = try? JSON(data: Data(reps.utf8))
+            if let json = json {
+                let metadata = json["metadata"].dictionaryValue
+                result = metadata.map{
+                    k,v in
+                    Book(id: k, formats: v["formats"].arrayObject as? [String], authors: v["authors"].arrayObject as? [String], tags: v["tags"].arrayObject as? [String], publisher: v["publisher"].stringValue, comments: v["comments"].string, timestamp: v["timestamp"].stringValue, title: v["title"].stringValue)
+                }
+            }
+        }
+        return result
     }
 }
