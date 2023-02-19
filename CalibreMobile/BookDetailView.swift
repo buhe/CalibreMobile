@@ -12,31 +12,34 @@ struct BookDetailView: View {
     let book: Book
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                AsyncImage(url: URL(string: book.coverURL)) { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                } placeholder: {
-                    // Placeholder view while the image is loading
-                    ProgressView()
-                }
-                .shadow(radius: 10)
-                .frame(width: 240, height: 320)
-                Text(book.title)
-                    .font(.title)
-                ForEach(book.authors ?? [], id: \.self){
-                    au in
-                    Text("-- \(au)")
-                }
-                Text(book.publisher ?? "")
-//                Text(book.comments ?? "")
-                HTMLView(htmlString: book.comments ?? "")
-                    .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
-                
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    AsyncImage(url: URL(string: book.coverURL)) { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } placeholder: {
+                        // Placeholder view while the image is loading
+                        ProgressView()
+                    }
+                    .shadow(radius: 10)
+                    .frame(width: 240, height: 320)
+                    //                Text(book.title)
+                    //                    .font(.title)
+                    ForEach(book.authors ?? [], id: \.self){
+                        au in
+                        Text("-- \(au)")
+                    }
+                    Text(book.publisher ?? "")
+                    //                Text(book.comments ?? "")
+                    HTMLView(htmlString: book.comments ?? "")
+                        .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
                     
+                    
+                }
+                .padding()
             }
-            .padding()
+            .navigationTitle(book.title)
         }
     }
 }
@@ -46,25 +49,7 @@ struct BookDetailView_Previews: PreviewProvider {
         BookDetailView(book: Book(id: "1", timestamp: "2023", title: "1234567890qwertyuiopkjhgfdsazxcvbnm,.1234567890-][poiiuytrreewwqqasdfghjkl;'/.,mnbvcxcz", coverURL: "http://192.168.31.60:8080/get/thumb/1/calibre?sz=600x800", formats: [],authors: ["abc"],tags: [],publisher: "123",comments: "1234567890abcdf"))
     }
 }
-//struct HTMLView: UIViewRepresentable {
-//    var htmlString: String
-//
-//    func makeUIView(context: Context) -> UITextView {
-//        return UITextView()
-//    }
-//
-//    func updateUIView(_ uiView: UITextView, context: Context) {
-//        do {
-//            let attributedString = try NSAttributedString(
-//                data: htmlString.data(using: .utf8)!,
-//                options: [.documentType: NSAttributedString.DocumentType.html],
-//                documentAttributes: nil)
-//            uiView.attributedText = attributedString
-//        } catch {
-//            print("Error: \(error)")
-//        }
-//    }
-//}
+
 struct HTMLView: UIViewRepresentable {
     let htmlString: String
 
