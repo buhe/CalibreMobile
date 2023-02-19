@@ -17,6 +17,9 @@
 		3FC51EFF29A0839500224109 /* CalibreMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EFE29A0839500224109 /* CalibreMobileUITests.swift */; };
 		3FC51F0129A0839500224109 /* CalibreMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F0029A0839500224109 /* CalibreMobileUITestsLaunchTests.swift */; };
 		3FC51F1129A0F59600224109 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3FC51F1029A0F59600224109 /* Alamofire */; };
+		3FC51F1429A1D3D400224109 /* CalibreSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1329A1D3D400224109 /* CalibreSDK.swift */; };
+		3FC51F1629A1D49B00224109 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1529A1D49B00224109 /* Model.swift */; };
+		3FC51F1929A1D82F00224109 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3FC51F1829A1D82F00224109 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,8 @@
 		3FC51EFA29A0839500224109 /* CalibreMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalibreMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC51EFE29A0839500224109 /* CalibreMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreMobileUITests.swift; sourceTree = "<group>"; };
 		3FC51F0029A0839500224109 /* CalibreMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FC51F1329A1D3D400224109 /* CalibreSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreSDK.swift; sourceTree = "<group>"; };
+		3FC51F1529A1D49B00224109 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC51F1929A1D82F00224109 /* SwiftyJSON in Frameworks */,
 				3FC51F1129A0F59600224109 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +107,7 @@
 		3FC51EDC29A0839400224109 /* CalibreMobile */ = {
 			isa = PBXGroup;
 			children = (
+				3FC51F1229A1D3B400224109 /* sdk */,
 				3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */,
 				3FC51EDF29A0839400224109 /* Persistence.swift */,
 				3FC51EE429A0839400224109 /* ContentView.swift */,
@@ -108,6 +115,7 @@
 				3FC51EE829A0839500224109 /* CalibreMobile.entitlements */,
 				3FC51EE129A0839400224109 /* CalibreMobile.xcdatamodeld */,
 				3FC51EE929A0839500224109 /* Preview Content */,
+				3FC51F1529A1D49B00224109 /* Model.swift */,
 			);
 			path = CalibreMobile;
 			sourceTree = "<group>";
@@ -137,6 +145,14 @@
 			path = CalibreMobileUITests;
 			sourceTree = "<group>";
 		};
+		3FC51F1229A1D3B400224109 /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				3FC51F1329A1D3D400224109 /* CalibreSDK.swift */,
+			);
+			path = sdk;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +171,7 @@
 			name = CalibreMobile;
 			packageProductDependencies = (
 				3FC51F1029A0F59600224109 /* Alamofire */,
+				3FC51F1829A1D82F00224109 /* SwiftyJSON */,
 			);
 			productName = CalibreMobile;
 			productReference = 3FC51EDA29A0839400224109 /* CalibreMobile.app */;
@@ -230,6 +247,7 @@
 			mainGroup = 3FC51ED129A0839400224109;
 			packageReferences = (
 				3FC51F0F29A0F59600224109 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3FC51F1729A1D82F00224109 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 3FC51EDB29A0839400224109 /* Products */;
 			projectDirPath = "";
@@ -276,7 +294,9 @@
 				3FC51EDE29A0839400224109 /* CalibreMobileApp.swift in Sources */,
 				3FC51EE029A0839400224109 /* Persistence.swift in Sources */,
 				3FC51EE529A0839400224109 /* ContentView.swift in Sources */,
+				3FC51F1629A1D49B00224109 /* Model.swift in Sources */,
 				3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */,
+				3FC51F1429A1D3D400224109 /* CalibreSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,10 +467,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.CalibreMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -487,10 +507,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.CalibreMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -642,6 +662,14 @@
 				kind = branch;
 			};
 		};
+		3FC51F1729A1D82F00224109 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -649,6 +677,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3FC51F0F29A0F59600224109 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		3FC51F1829A1D82F00224109 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FC51F1729A1D82F00224109 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 
