@@ -17,7 +17,14 @@ struct BookView: View {
                 ForEach(books) {
                     i in
                     HStack {
-                        Image(systemName: "books.vertical")
+                        AsyncImage(url: URL(string: "http://192.168.31.60:8080/get/thumb/27/calibre?sz=600x800")) { image in
+                            image.resizable()
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            // Placeholder view while the image is loading
+                            ProgressView()
+                        }
+                        .frame(width: 120, height: 160)
                         Text(i.title)
                         
                     }
@@ -39,7 +46,6 @@ struct BookView: View {
             .sheet(isPresented: $showCalibre){
                 CalibreServerView()
             }
-            
         }
     }
 }
