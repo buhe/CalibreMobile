@@ -24,6 +24,7 @@
 		3FC51F1D29A1DC4F00224109 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1C29A1DC4F00224109 /* BookView.swift */; };
 		3FC51F1F29A1DC6E00224109 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1E29A1DC6D00224109 /* SettingView.swift */; };
 		3FC51F2129A1EEE200224109 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2029A1EEE100224109 /* ViewModel.swift */; };
+		3FC51F2329A2086800224109 /* CalibreServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2229A2086800224109 /* CalibreServerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3FC51F1C29A1DC4F00224109 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		3FC51F1E29A1DC6D00224109 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		3FC51F2029A1EEE100224109 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		3FC51F2229A2086800224109 /* CalibreServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreServerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				3FC51F1C29A1DC4F00224109 /* BookView.swift */,
 				3FC51F1E29A1DC6D00224109 /* SettingView.swift */,
 				3FC51F2029A1EEE100224109 /* ViewModel.swift */,
+				3FC51F2229A2086800224109 /* CalibreServerView.swift */,
 			);
 			path = CalibreMobile;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				3FC51EE029A0839400224109 /* Persistence.swift in Sources */,
 				3FC51F1F29A1DC6E00224109 /* SettingView.swift in Sources */,
 				3FC51EE529A0839400224109 /* ContentView.swift in Sources */,
+				3FC51F2329A2086800224109 /* CalibreServerView.swift in Sources */,
 				3FC51F1629A1D49B00224109 /* Model.swift in Sources */,
 				3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */,
 				3FC51F1429A1D3D400224109 /* CalibreSDK.swift in Sources */,

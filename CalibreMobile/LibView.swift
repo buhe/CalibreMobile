@@ -10,6 +10,7 @@ import SwiftUI
 struct LibView: View {
     @State var selectedItem: String?
     @State var libs: [String] = []
+    @State var showCalibre = false
     
     var body: some View {
         NavigationStack {
@@ -21,6 +22,7 @@ struct LibView: View {
                         Text(i)
                         
                     }
+                    .padding(8)
                 }.onChange(of: selectedItem ?? ""){
                     c in
                    print(selectedItem!)
@@ -31,6 +33,16 @@ struct LibView: View {
                 self.libs =  await CalibreSDK().listLibs()
             }
             .navigationTitle("Library")
+            .toolbar{
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button{showCalibre = true}label: {
+                        Image(systemName:"0.circle")
+                    }
+                }
+            }
+            .sheet(isPresented: $showCalibre){
+                CalibreServerView()
+            }
             
         }
         
