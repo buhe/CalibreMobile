@@ -44,16 +44,25 @@ struct BookView: View {
     let book: Book
     
     var body: some View {
-        AsyncImage(url: URL(string: book.coverURL)) { image in
-            image.resizable()
-                .aspectRatio(contentMode: .fit)
-        } placeholder: {
-            // Placeholder view while the image is loading
-            ProgressView()
+        NavigationLink{
+            BookDetailView(book: book)
+        } label: {
+            VStack {
+                AsyncImage(url: URL(string: book.coverURL)) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    // Placeholder view while the image is loading
+                    ProgressView()
+                }
+                .shadow(radius: 10)
+                .frame(width: 120, height: 160)
+                .aspectRatio(2/3, contentMode: .fit)
+                Text(book.title)
+                    .font(.caption)
+                    .lineLimit(1)
+            }
         }
-        .shadow(radius: 10)
-        .frame(width: 120, height: 160)
-        .aspectRatio(2/3, contentMode: .fit)
     }
 }
 

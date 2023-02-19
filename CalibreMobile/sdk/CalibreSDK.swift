@@ -35,7 +35,7 @@ struct CalibreSDK {
                 let metadata = json["metadata"].dictionaryValue
                 result = metadata.map{
                     k,v in
-                    Book(id: k, formats: v["formats"].arrayObject as? [String], authors: v["authors"].arrayObject as? [String], tags: v["tags"].arrayObject as? [String], publisher: v["publisher"].stringValue, comments: v["comments"].string, timestamp: v["timestamp"].stringValue, title: v["title"].stringValue, coverURL: "http://192.168.31.60:8080/get/thumb/\(k)/calibre?sz=600x800")
+                    Book(id: k,timestamp: v["timestamp"].stringValue, title: v["title"].stringValue, coverURL: "http://192.168.31.60:8080/get/thumb/\(k)/calibre?sz=600x800", formats: v["formats"].arrayObject as? [String], authors: v["authors"].arrayObject as? [String], tags: v["tags"].arrayObject as? [String], publisher: v["publisher"].stringValue, comments: v["comments"].string)
                 }
             }
         }
