@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct LibView: View {
+    @State var selectedItem: String?
+    @State var libs: [String] = []
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(selection: $selectedItem)  {
+                ForEach(libs, id: \.self) {
+                    i in
+                    HStack {
+                        Image(systemName: "books.vertical")
+                        Text(i)
+                        
+                    }
+                }.onChange(of: selectedItem ?? ""){
+                    c in
+                   print(selectedItem!)
+                }
+            }
+            .listStyle(PlainListStyle())
+            .task {
+                self.libs =  await CalibreSDK().listLibs()
+            }
+            .navigationTitle("Library")
+            
+        }
+        
     }
 }
 

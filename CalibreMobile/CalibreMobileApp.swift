@@ -10,7 +10,9 @@ import SwiftUI
 @main
 struct CalibreMobileApp: App {
     let persistenceController = PersistenceController.shared
-
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 34)!]
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()

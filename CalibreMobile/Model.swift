@@ -10,3 +10,7 @@ import Foundation
 struct Book {
     
 }
+
+struct Model {
+    var lib: String = ""
+}

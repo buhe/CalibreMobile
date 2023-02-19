@@ -23,6 +23,7 @@
 		3FC51F1B29A1DC3A00224109 /* LibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1A29A1DC3A00224109 /* LibView.swift */; };
 		3FC51F1D29A1DC4F00224109 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1C29A1DC4F00224109 /* BookView.swift */; };
 		3FC51F1F29A1DC6E00224109 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F1E29A1DC6D00224109 /* SettingView.swift */; };
+		3FC51F2129A1EEE200224109 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2029A1EEE100224109 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3FC51F1A29A1DC3A00224109 /* LibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibView.swift; sourceTree = "<group>"; };
 		3FC51F1C29A1DC4F00224109 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		3FC51F1E29A1DC6D00224109 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		3FC51F2029A1EEE100224109 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				3FC51F1A29A1DC3A00224109 /* LibView.swift */,
 				3FC51F1C29A1DC4F00224109 /* BookView.swift */,
 				3FC51F1E29A1DC6D00224109 /* SettingView.swift */,
+				3FC51F2029A1EEE100224109 /* ViewModel.swift */,
 			);
 			path = CalibreMobile;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC51F2129A1EEE200224109 /* ViewModel.swift in Sources */,
 				3FC51EDE29A0839400224109 /* CalibreMobileApp.swift in Sources */,
 				3FC51F1B29A1DC3A00224109 /* LibView.swift in Sources */,
 				3FC51EE029A0839400224109 /* Persistence.swift in Sources */,
