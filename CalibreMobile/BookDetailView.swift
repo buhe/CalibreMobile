@@ -11,29 +11,28 @@ struct BookDetailView: View {
     let book: Book
     
     var body: some View {
-        VStack(alignment: .leading) {
-            AsyncImage(url: URL(string: book.coverURL)) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-            } placeholder: {
-                // Placeholder view while the image is loading
-                ProgressView()
+        ScrollView {
+            VStack(alignment: .leading) {
+                AsyncImage(url: URL(string: book.coverURL)) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    // Placeholder view while the image is loading
+                    ProgressView()
+                }
+                .shadow(radius: 10)
+                .frame(width: 240, height: 320)
+                Text(book.title)
+                    .font(.title)
+                ForEach(book.authors ?? [], id: \.self){
+                    au in
+                    Text("-- \(au)")
+                }
+                Text(book.publisher ?? "")
+                Text(book.comments ?? "")
             }
-            .shadow(radius: 10)
-            .frame(width: 240, height: 320)
-            Text(book.title)
-                .font(.title)
-            ForEach(book.authors ?? [], id: \.self){
-                au in
-                Text("-- \(au)")
-            }
-            
-            Text(book.publisher ?? "")
-            Text(book.comments ?? "")
-            
-            
+            .padding()
         }
-        .padding()
     }
 }
 
