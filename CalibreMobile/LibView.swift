@@ -12,6 +12,12 @@ struct LibView: View {
     @State var showCalibre = false
     @ObservedObject var viewModel: ViewModel
     
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [],
+        animation: .default)
+    private var servers: FetchedResults<Server>
+    
     var body: some View {
         NavigationStack {
             List(selection: $viewModel.model.lib)  {
@@ -43,7 +49,7 @@ struct LibView: View {
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button{showCalibre = true}label: {
-                        Image(systemName:"0.circle")
+                        Image(systemName: servers.filter{$0.selected}.first?.icon! ?? "0.circle")
                     }
                 }
             }

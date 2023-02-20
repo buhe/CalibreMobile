@@ -126,12 +126,11 @@ struct CalibreServerView: View {
     }
 }
 
-struct ServerConfig: Identifiable, Hashable {
+private struct ServerConfig: Identifiable, Hashable {
     var id: String
     let name: String
     let icon: String
     let selected: Bool
-    
 }
 
 struct CalibreServerView_Previews: PreviewProvider {
