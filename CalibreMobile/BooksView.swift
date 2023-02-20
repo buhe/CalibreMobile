@@ -24,7 +24,14 @@ struct BooksView: View {
                 }
             }
             .task {
-                self.books =  await CalibreSDK().listBooks(by: "")
+                self.books =  await CalibreSDK().listBooks(by: "", server: viewModel.model.current!)
+            }
+            .onChange(of: viewModel.model.current) {
+                s in
+                Task {
+                    self.books =  await CalibreSDK().listBooks(by: "", server: viewModel.model.current!)
+                }
+                
             }
             .navigationTitle("Book")
             .toolbar{

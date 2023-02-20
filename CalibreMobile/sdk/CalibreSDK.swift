@@ -11,9 +11,12 @@ import SwiftyJSON
 
 struct CalibreSDK {
     
-    func listLibs() async -> [String] {
+    func listLibs(server: Server) async -> [String] {
         var result: [String] = []
-        let reps = try? await AF.request("http://192.168.31.60:8080/interface-data/update").serializingString().value
+        if server.demo {
+            return result
+        }
+        let reps = try? await AF.request("http://\(server.host!):\(server.port!)/interface-data/update").serializingString().value
         print("call api.")
         if let reps = reps {
             let json = try? JSON(data: Data(reps.utf8))
@@ -24,10 +27,14 @@ struct CalibreSDK {
         return result
     }
     
-    func listBooks(by: String) async -> [Book] {
+    func listBooks(by: String, server: Server) async -> [Book] {
         
         var result: [Book] = []
-        let reps = try? await AF.request("http://192.168.31.60:8080/interface-data/books-init?library_id=calibre&sort=timestamp.desc").serializingString().value
+        if server.demo {
+            return result
+        }
+        print(server)
+        let reps = try? await AF.request("http://\(server.host!):\(server.port!)/interface-data/books-init?library_id=calibre&sort=timestamp.desc").serializingString().value
         print("call api.")
         if let reps = reps {
             let json = try? JSON(data: Data(reps.utf8))

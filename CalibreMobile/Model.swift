@@ -25,7 +25,7 @@ struct Book: Identifiable {
 struct Model {
     @AppStorage(wrappedValue: true, "first") var first: Bool
     private var viewContext: NSManagedObjectContext
-    private var current: Server?
+    var current: Server?
     
     var lib: String = ""
     var hasAndSelectDemo = false
