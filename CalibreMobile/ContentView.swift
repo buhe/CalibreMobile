@@ -10,16 +10,17 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject var viewModel: ViewModel
 
     var body: some View {
         TabView {
-            BooksView()
+            BooksView(viewModel: viewModel)
                 .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                 Label("Books", systemImage: "book")
             }
             
-            LibView()
+            LibView(viewModel: viewModel)
                 .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                 Label("Library", systemImage: "books.vertical")
@@ -37,6 +38,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView(viewModel: ViewModel(viewContext: PersistenceController.preview.container.viewContext))
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

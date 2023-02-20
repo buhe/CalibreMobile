@@ -14,8 +14,10 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newItem = Server(context: viewContext)
+            newItem.demo = false
+            newItem.host = "192.168.30.60"
+            newItem.port = "8080"
         }
         do {
             try viewContext.save()

@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import CoreData
 
 class ViewModel: ObservableObject {
     
     @Published var model: Model
     
-    init(model: Model) {
-        self.model = model
+    init(viewContext: NSManagedObjectContext) {
+        model = Model(viewContext: viewContext)
+            
     }
 }

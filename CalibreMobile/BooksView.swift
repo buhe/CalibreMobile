@@ -10,6 +10,7 @@ import SwiftUI
 struct BooksView: View {
     @State var books: [Book] = []
     @State var showCalibre = false
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         NavigationStack {
@@ -34,7 +35,9 @@ struct BooksView: View {
                 }
             }
             .sheet(isPresented: $showCalibre){
-                CalibreServerView()
+                CalibreServerView(viewModel: viewModel){
+                    showCalibre = false
+                }
             }
         }
     }
@@ -69,6 +72,6 @@ struct BookView: View {
 
 struct BookView_Previews: PreviewProvider {
     static var previews: some View {
-        BooksView()
+        BooksView(viewModel: ViewModel(viewContext: PersistenceController.preview.container.viewContext))
     }
 }

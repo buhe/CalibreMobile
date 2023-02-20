@@ -11,6 +11,7 @@ struct LibView: View {
     @State var selectedItem: String?
     @State var libs: [String] = []
     @State var showCalibre = false
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         NavigationStack {
@@ -41,7 +42,9 @@ struct LibView: View {
                 }
             }
             .sheet(isPresented: $showCalibre){
-                CalibreServerView()
+                CalibreServerView(viewModel: viewModel){
+                    showCalibre = false
+                }
             }
             
         }
@@ -51,6 +54,6 @@ struct LibView: View {
 
 struct LibView_Previews: PreviewProvider {
     static var previews: some View {
-        LibView()
+        LibView(viewModel: ViewModel(viewContext: PersistenceController.preview.container.viewContext))
     }
 }
