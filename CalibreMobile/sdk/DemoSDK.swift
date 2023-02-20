@@ -16,5 +16,7 @@ struct DemoSDK: SDK {
         []
     }
     
-    
+    func ping() async -> Bool {
+        false
+    }
 }

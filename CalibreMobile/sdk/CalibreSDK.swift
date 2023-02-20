@@ -10,6 +10,10 @@ import Alamofire
 import SwiftyJSON
 
 struct CalibreSDK: SDK{
+    func ping() async -> Bool {
+        false
+    }
+    
     
     func listLibs(server: Server) async -> [String] {
         var result: [String] = []

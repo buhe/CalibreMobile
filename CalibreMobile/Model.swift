@@ -30,6 +30,8 @@ struct Model {
     @AppStorage("libs") var lib: String?
     var hasAndSelectDemo = false
     
+    var network = false
+    
     fileprivate func workaroundChinaSpecialBug() {
         let url = URL(string: "https://www.baidu.com")!
         

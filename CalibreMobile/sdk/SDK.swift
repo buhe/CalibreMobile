@@ -9,5 +9,6 @@ import Foundation
 
 protocol SDK {
     func listLibs(server: Server) async -> [String]
-    func listBooks(by: String, server: Server) async -> [Book] 
+    func listBooks(by: String, server: Server) async -> [Book]
+    func ping() async -> Bool
 }
