@@ -21,7 +21,8 @@ struct CalibreSDK {
         if let reps = reps {
             let json = try? JSON(data: Data(reps.utf8))
             if let json = json {
-                result = Array(json["library_map"].dictionaryValue.keys)
+                let libs = json["library_map"].dictionaryValue
+                result = Array(libs.sorted(by: {a,b in (a.key.compare(b.key)).rawValue < 0}).map{k,v in k})
             }
         }
         return result
