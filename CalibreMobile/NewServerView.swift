@@ -10,7 +10,8 @@ import SwiftUI
 struct NewServerView: View {
     @Environment(\.managedObjectContext) private var viewContext
     let firstServer: Bool
-    let close: () -> Void
+    let viewModel: ViewModel
+    let close: (_ c: String) -> Void
     @State var name = ""
     @State var icon = "a.circle"
     @State var host = ""
@@ -70,7 +71,7 @@ struct NewServerView: View {
             errorMessage = "Import calibre port, please."
             return
         }
-        withAnimation {
+        
             let newItem = Server(context: viewContext)
             newItem.name = name
             newItem.icon = icon
@@ -88,14 +89,20 @@ struct NewServerView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
-        }
-        close()
+            Task {
+                let libs = await CalibreSDK().listLibs(server: newItem)
+                if !libs.isEmpty {
+                    viewModel.model.lib = libs.first!
+                }
+            }
+        
+        close(newItem.name!)
     }
     
 }
-
-struct NewServerView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewServerView(firstServer: true){}
-    }
-}
+//
+//struct NewServerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewServerView(firstServer: true){}
+//    }
+//}
