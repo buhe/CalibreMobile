@@ -30,6 +30,7 @@
 		3FC51F2929A3143C00224109 /* NewServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2829A3143C00224109 /* NewServerView.swift */; };
 		3FC51F2B29A3543300224109 /* DemoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2A29A3543300224109 /* DemoSDK.swift */; };
 		3FC51F2D29A3544700224109 /* SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2C29A3544700224109 /* SDK.swift */; };
+		3FE45A0329A3A875004716BD /* FallbackSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE45A0229A3A875004716BD /* FallbackSDK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		3FC51F2829A3143C00224109 /* NewServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServerView.swift; sourceTree = "<group>"; };
 		3FC51F2A29A3543300224109 /* DemoSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSDK.swift; sourceTree = "<group>"; };
 		3FC51F2C29A3544700224109 /* SDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDK.swift; sourceTree = "<group>"; };
+		3FE45A0229A3A875004716BD /* FallbackSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallbackSDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				3FC51F1329A1D3D400224109 /* CalibreSDK.swift */,
 				3FC51F2A29A3543300224109 /* DemoSDK.swift */,
 				3FC51F2C29A3544700224109 /* SDK.swift */,
+				3FE45A0229A3A875004716BD /* FallbackSDK.swift */,
 			);
 			path = sdk;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				3FC51F2729A2535300224109 /* Ex.swift in Sources */,
 				3FC51F2329A2086800224109 /* CalibreServerView.swift in Sources */,
 				3FC51F1629A1D49B00224109 /* Model.swift in Sources */,
+				3FE45A0329A3A875004716BD /* FallbackSDK.swift in Sources */,
 				3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */,
 				3FC51F1429A1D3D400224109 /* CalibreSDK.swift in Sources */,
 				3FC51F1D29A1DC4F00224109 /* BooksView.swift in Sources */,
