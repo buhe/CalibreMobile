@@ -27,7 +27,7 @@ struct Model {
     private var viewContext: NSManagedObjectContext
     var current: Server?
     
-    var lib: String = ""
+    @AppStorage("libs") var lib: String?
     var hasAndSelectDemo = false
     
     fileprivate func workaroundChinaSpecialBug() {
@@ -86,6 +86,7 @@ struct Model {
             }
         }
     }
+
     
     init(viewContext: NSManagedObjectContext) {
         self.viewContext = viewContext

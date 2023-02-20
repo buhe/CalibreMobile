@@ -24,12 +24,19 @@ struct BooksView: View {
                 }
             }
             .task {
-                self.books =  await CalibreSDK().listBooks(by: "", server: viewModel.model.current!)
+                self.books =  await CalibreSDK().listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
             }
             .onChange(of: viewModel.model.current) {
                 s in
                 Task {
-                    self.books =  await CalibreSDK().listBooks(by: "", server: viewModel.model.current!)
+                    self.books =  await CalibreSDK().listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
+                }
+                
+            }
+            .onChange(of: viewModel.model.lib) {
+                s in
+                Task {
+                    self.books =  await CalibreSDK().listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
                 }
                 
             }

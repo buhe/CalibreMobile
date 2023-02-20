@@ -33,8 +33,8 @@ struct CalibreSDK {
         if server.demo {
             return result
         }
-        print(server)
-        let reps = try? await AF.request("http://\(server.host!):\(server.port!)/interface-data/books-init?library_id=calibre&sort=timestamp.desc").serializingString().value
+        print("by \(by)")
+        let reps = try? await AF.request("http://\(server.host!):\(server.port!)/interface-data/books-init?library_id=\(by)&sort=timestamp.desc").serializingString().value
         print("call api.")
         if let reps = reps {
             let json = try? JSON(data: Data(reps.utf8))

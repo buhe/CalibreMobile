@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct LibView: View {
-    @State var selectedItem: String?
     @State var libs: [String] = []
     @State var showCalibre = false
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         NavigationStack {
-            List(selection: $selectedItem)  {
+            List(selection: $viewModel.model.lib)  {
                 ForEach(libs, id: \.self) {
                     i in
                     HStack {
@@ -24,9 +23,6 @@ struct LibView: View {
                         
                     }
                     .padding(8)
-                }.onChange(of: selectedItem ?? ""){
-                    c in
-                   print(selectedItem!)
                 }
             }
             .listStyle(PlainListStyle())
@@ -37,6 +33,9 @@ struct LibView: View {
                 s in
                 Task {
                     self.libs =  await CalibreSDK().listLibs(server: viewModel.model.current!)
+                    if !libs.isEmpty {
+                        viewModel.model.lib = libs.first!
+                    }
                 }
                 
             }
