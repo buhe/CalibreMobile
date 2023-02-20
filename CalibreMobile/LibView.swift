@@ -48,8 +48,13 @@ struct LibView: View {
             .navigationTitle("Library")
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
-                    Button{showCalibre = true}label: {
-                        Image(systemName: servers.filter{$0.selected}.first?.icon! ?? "0.circle")
+                    HStack{
+                        Button{showCalibre = true}label: {
+                            Image(systemName: servers.filter{$0.selected}.first?.icon! ?? "0.circle")
+                        }
+                        Image(systemName: "alarm.waves.left.and.right")
+                            .foregroundColor(.red)
+                            .opacity(0.7)
                     }
                 }
             }
