@@ -28,6 +28,8 @@
 		3FC51F2529A2375300224109 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2429A2375300224109 /* BookDetailView.swift */; };
 		3FC51F2729A2535300224109 /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2629A2535300224109 /* Ex.swift */; };
 		3FC51F2929A3143C00224109 /* NewServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2829A3143C00224109 /* NewServerView.swift */; };
+		3FC51F2B29A3543300224109 /* DemoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2A29A3543300224109 /* DemoSDK.swift */; };
+		3FC51F2D29A3544700224109 /* SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F2C29A3544700224109 /* SDK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		3FC51F2429A2375300224109 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		3FC51F2629A2535300224109 /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
 		3FC51F2829A3143C00224109 /* NewServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServerView.swift; sourceTree = "<group>"; };
+		3FC51F2A29A3543300224109 /* DemoSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSDK.swift; sourceTree = "<group>"; };
+		3FC51F2C29A3544700224109 /* SDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				3FC51F1329A1D3D400224109 /* CalibreSDK.swift */,
+				3FC51F2A29A3543300224109 /* DemoSDK.swift */,
+				3FC51F2C29A3544700224109 /* SDK.swift */,
 			);
 			path = sdk;
 			sourceTree = "<group>";
@@ -319,7 +325,9 @@
 				3FC51EDE29A0839400224109 /* CalibreMobileApp.swift in Sources */,
 				3FC51F1B29A1DC3A00224109 /* LibView.swift in Sources */,
 				3FC51EE029A0839400224109 /* Persistence.swift in Sources */,
+				3FC51F2B29A3543300224109 /* DemoSDK.swift in Sources */,
 				3FC51F2929A3143C00224109 /* NewServerView.swift in Sources */,
+				3FC51F2D29A3544700224109 /* SDK.swift in Sources */,
 				3FC51F2529A2375300224109 /* BookDetailView.swift in Sources */,
 				3FC51F1F29A1DC6E00224109 /* SettingView.swift in Sources */,
 				3FC51EE529A0839400224109 /* ContentView.swift in Sources */,

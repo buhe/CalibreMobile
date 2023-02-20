@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct CalibreSDK {
+struct CalibreSDK: SDK{
     
     func listLibs(server: Server) async -> [String] {
         var result: [String] = []
