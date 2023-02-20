@@ -123,8 +123,8 @@
 		3FC51EDC29A0839400224109 /* CalibreMobile */ = {
 			isa = PBXGroup;
 			children = (
-				3FC51F2429A2375300224109 /* BookDetailView.swift */,
 				3FC51F1229A1D3B400224109 /* sdk */,
+				3FC51F2429A2375300224109 /* BookDetailView.swift */,
 				3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */,
 				3FC51EDF29A0839400224109 /* Persistence.swift */,
 				3FC51EE429A0839400224109 /* ContentView.swift */,

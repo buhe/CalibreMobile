@@ -33,7 +33,7 @@ struct CalibreSDK {
             let json = try? JSON(data: Data(reps.utf8))
             if let json = json {
                 let metadata = json["metadata"].dictionaryValue
-                result = metadata.map{
+                result = metadata.sorted(by: {a,b in (a.key.compare(b.key)).rawValue < 0}).map{
                     k,v in
                     Book(id: k,timestamp: v["timestamp"].stringValue, title: v["title"].stringValue, coverURL: "http://192.168.31.60:8080/get/thumb/\(k)/calibre?sz=600x800", formats: v["formats"].arrayObject as? [String], authors: v["authors"].arrayObject as? [String], tags: v["tags"].arrayObject as? [String], publisher: v["publisher"].stringValue, comments: v["comments"].string)
                 }
