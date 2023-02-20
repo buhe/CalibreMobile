@@ -29,7 +29,10 @@ struct CalibreServerView: View {
             EditButton()
         }
         .sheet(isPresented: $showNewServer){
-            NewServerView()
+            NewServerView(firstServer: servers.isEmpty){
+                showNewServer = false
+            }
+                .environment(\.managedObjectContext, viewContext)
         }
         .padding()
         List(selection: $selectedItem)  {
