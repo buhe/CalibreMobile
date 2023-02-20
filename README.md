@@ -1,3 +1,3 @@
 ## Calibre Mobile
 
-Calibre iOS Client.
+A Calibre iOS Client.
