@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 class HieratchySDK {
     var hasAndSelectDemo = false
@@ -20,8 +21,8 @@ class HieratchySDK {
     
     var timer: Timer?
     
-    func newServer(server: Server) {
-        calibre = CalibreSDK(server: server)
+    func newServer(server: Server, viewContext: NSManagedObjectContext) {
+        calibre = CalibreSDK(server: server, viewContext: viewContext)
         if timer != nil {
             timer?.invalidate()
         }

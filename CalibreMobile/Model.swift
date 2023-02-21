@@ -29,7 +29,7 @@ struct Model {
         didSet {
             print("Monitor sever: \(self.current!)")
             // ping new server
-            self.sdk.newServer(server: self.current!)
+            self.sdk.newServer(server: self.current!, viewContext: viewContext)
         }
     }
     

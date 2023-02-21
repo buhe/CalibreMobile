@@ -3,6 +3,7 @@
     <entity name="BookCache" representedClassName="BookCache" syncable="YES" codeGenerationType="class">
         <attribute name="authors" optional="YES" attributeType="String"/>
         <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="cover" optional="YES" attributeType="Binary"/>
         <attribute name="coverURL" optional="YES" attributeType="String"/>
         <attribute name="formats" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>

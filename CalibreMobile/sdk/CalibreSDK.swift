@@ -8,11 +8,14 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import CoreData
+
 struct PingError: Error {
     
 }
 struct CalibreSDK {
     let server: Server
+    let viewContext: NSManagedObjectContext
     
     func ping() throws {
         var e: Any? = nil
@@ -42,9 +45,25 @@ struct CalibreSDK {
             if let json = json {
                 let libs = json["library_map"].dictionaryValue
                 result = Array(libs.sorted(by: {a,b in (a.key.compare(b.key)).rawValue < 0}).map{k,v in k})
+//                addLib(libs: result)
             }
         }
         return result
+    }
+    
+    private func addLib(libs: [String]) {
+        for lib in libs {
+            let l = LibCache(context: viewContext)
+            l.name = lib
+        }
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
     
     func listBooks(by: String) async -> [Book] {
@@ -64,8 +83,34 @@ struct CalibreSDK {
                     k,v in
                     Book(id: k,timestamp: v["timestamp"].stringValue, title: v["title"].stringValue, coverURL: "http://\(server.host!):\(server.port!)/get/thumb/\(k)/calibre?sz=600x800", formats: v["formats"].arrayObject as? [String], authors: v["authors"].arrayObject as? [String], tags: v["tags"].arrayObject as? [String], publisher: v["publisher"].stringValue, comments: v["comments"].string)
                 }
+//                await addBook(books: result)
             }
         }
         return result
+    }
+    
+    private func addBook(books: [Book]) async {
+        for book in books {
+            let b = BookCache(context: viewContext)
+            b.id = book.id
+            b.title = book.title
+            b.coverURL = book.coverURL
+            b.authors = JSON(book.authors ?? []).rawString()
+            b.publisher = book.publisher
+            b.comments = book.comments
+            b.formats = JSON(book.formats ?? []).rawString()
+            b.tags = JSON(book.tags ?? []).rawString()
+            b.timestamp = book.timestamp
+            let datas = await AF.request(book.coverURL).serializingData().response
+            b.cover = datas.data
+        }
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
 }
