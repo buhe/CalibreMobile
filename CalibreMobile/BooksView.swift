@@ -11,12 +11,15 @@ struct BooksView: View {
     @State var books: [Book] = []
     @State var showCalibre = false
     @ObservedObject var viewModel: ViewModel
+//    @State var network = true
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         sortDescriptors: [],
         animation: .default)
     private var servers: FetchedResults<Server>
+    
+    @EnvironmentObject var timerWrapper: TimerWrapper
     
     var body: some View {
         NavigationStack {
@@ -53,9 +56,13 @@ struct BooksView: View {
                         Button{showCalibre = true}label: {
                             Image(systemName: servers.filter{$0.selected}.first?.icon! ?? "0.circle")
                         }
-                        Image(systemName: "alarm.waves.left.and.right")
-                            .foregroundColor(.red)
-                            .opacity(0.7)
+                        if viewModel.model.sdk.network {
+                            Image(systemName: "alarm")
+                        } else {
+                            Image(systemName: "alarm.waves.left.and.right")
+                                .foregroundColor(.red)
+                                .opacity(0.7)
+                        }
                     }
                 }
             }
@@ -64,6 +71,7 @@ struct BooksView: View {
                     showCalibre = false
                 }
             }
+
         }
     }
 }

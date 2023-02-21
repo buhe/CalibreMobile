@@ -8,18 +8,25 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
-
+struct PingError: Error {
+    
+}
 struct CalibreSDK {
     let server: Server
     
-    func ping() async -> Bool {
-        do {
-            let _ = try await AF.request("http://\(server.host!):\(server.port!)/interface-data/update").serializingString().value
-            return true
-        } catch {
-            return false
+    func ping() throws {
+        var e: Any? = nil
+        let semaphore = DispatchSemaphore(value: 0)
+        let url = URL(string: "http://\(server.host!):\(server.port!)/interface-data/update")!
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            e = error
+            semaphore.signal()
         }
-        
+        task.resume()
+        semaphore.wait()
+        if e != nil {
+            throw PingError()
+        }
     }
     
     
