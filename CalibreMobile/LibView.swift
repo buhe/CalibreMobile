@@ -33,12 +33,12 @@ struct LibView: View {
             }
             .listStyle(PlainListStyle())
             .task {
-                self.libs =  await viewModel.model.sdk.listLibs(server: viewModel.model.current!)
+                self.libs =  await viewModel.model.sdk.listLibs()
             }
             .onChange(of: viewModel.model.current) {
                 s in
                 Task {
-                    self.libs =  await viewModel.model.sdk.listLibs(server: viewModel.model.current!)
+                    self.libs =  await viewModel.model.sdk.listLibs()
                     if !libs.isEmpty {
                         viewModel.model.lib = libs.first!
                     }

@@ -89,12 +89,7 @@ struct NewServerView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
-            Task {
-                let libs = await CalibreSDK().listLibs(server: newItem)
-                if !libs.isEmpty {
-                    viewModel.model.lib = libs.first!
-                }
-            }
+            
         
         close(newItem.name!)
     }

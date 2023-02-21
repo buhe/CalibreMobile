@@ -30,19 +30,19 @@ struct BooksView: View {
                 }
             }
             .task {
-                self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
+                self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
             }
             .onChange(of: viewModel.model.current) {
                 s in
                 Task {
-                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
+                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
                 }
                 
             }
             .onChange(of: viewModel.model.lib) {
                 s in
                 Task {
-                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
+                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
                 }
                 
             }

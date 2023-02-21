@@ -12,25 +12,37 @@ struct HieratchySDK {
     
     var network = false
     
-    var calibre = CalibreSDK()
+    var calibre: CalibreSDK?
     
     var fallback = FallbackSDK()
     
     var demo = DemoSDK()
     
-    func listLibs(server: Server) async -> [String] {
+    init() {
+
+//        self.network = self.calibre.ping()
+               
+        
+        
+    }
+    
+    mutating func newServer(server: Server) {
+        calibre = CalibreSDK(server: server)
+    }
+    
+    func listLibs() async -> [String] {
         if hasAndSelectDemo {
-            return await demo.listLibs(server: server)
+            return await demo.listLibs()
         } else {
-            return await calibre.listLibs(server: server)
+            return await calibre!.listLibs()
         }
     }
     
-    func listBooks(by: String, server: Server) async -> [Book] {
+    func listBooks(by: String) async -> [Book] {
         if hasAndSelectDemo {
-            return await demo.listBooks(by: by, server: server)
+            return await demo.listBooks(by: by)
         } else {
-            return await calibre.listBooks(by: by, server: server)
+            return await calibre!.listBooks(by: by)
         }
     }
 }

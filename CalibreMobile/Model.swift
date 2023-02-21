@@ -25,7 +25,13 @@ struct Book: Identifiable {
 struct Model {
     @AppStorage(wrappedValue: true, "first") var first: Bool
     private var viewContext: NSManagedObjectContext
-    var current: Server?
+    var current: Server? {
+        didSet {
+            print("Monitor sever: \(self.current!)")
+            // ping new server
+            self.sdk.newServer(server: self.current!)
+        }
+    }
     
     @AppStorage("libs") var lib: String?
 

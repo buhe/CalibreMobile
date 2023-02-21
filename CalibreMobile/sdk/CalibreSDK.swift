@@ -10,12 +10,20 @@ import Alamofire
 import SwiftyJSON
 
 struct CalibreSDK {
+    let server: Server
+    
     func ping() async -> Bool {
-        false
+        do {
+            let _ = try await AF.request("http://\(server.host!):\(server.port!)/interface-data/update").serializingString().value
+            return true
+        } catch {
+            return false
+        }
+        
     }
     
     
-    func listLibs(server: Server) async -> [String] {
+    func listLibs() async -> [String] {
         var result: [String] = []
         if server.demo {
             return result
@@ -32,7 +40,7 @@ struct CalibreSDK {
         return result
     }
     
-    func listBooks(by: String, server: Server) async -> [Book] {
+    func listBooks(by: String) async -> [Book] {
         
         var result: [Book] = []
         if server.demo {
