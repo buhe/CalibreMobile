@@ -56,10 +56,16 @@ struct LibView: View {
                         }
                         if viewModel.model.sdk.network {
                             Image(systemName: "alarm")
+                                .task {
+                                    self.libs =  await viewModel.model.sdk.listLibs()
+                                }
                         } else {
                             Image(systemName: "alarm.waves.left.and.right")
                                 .foregroundColor(.red)
                                 .opacity(0.7)
+                                .task {
+                                    self.libs =  await viewModel.model.sdk.listLibs()
+                                }
                         }
                     }
                 }

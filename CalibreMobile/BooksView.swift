@@ -21,6 +21,8 @@ struct BooksView: View {
     
     @EnvironmentObject var timerWrapper: TimerWrapper
     
+//    @State var network: Bool? = nil
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -58,10 +60,16 @@ struct BooksView: View {
                         }
                         if viewModel.model.sdk.network {
                             Image(systemName: "alarm")
+                                .task {
+                                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                                }
                         } else {
                             Image(systemName: "alarm.waves.left.and.right")
                                 .foregroundColor(.red)
                                 .opacity(0.7)
+                                .task {
+                                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                                }
                         }
                     }
                 }
