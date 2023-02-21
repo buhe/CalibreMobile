@@ -42,17 +42,25 @@ class HieratchySDK {
     
     func listLibs() async -> [String] {
         if hasAndSelectDemo {
-            return await demo.listLibs()
+            return demo.listLibs()
         } else {
-            return await calibre!.listLibs()
+            if network {
+                return await calibre!.listLibs()
+            } else {
+                return fallback.listLibs()
+            }
         }
     }
     
     func listBooks(by: String) async -> [Book] {
         if hasAndSelectDemo {
-            return await demo.listBooks(by: by)
+            return demo.listBooks(by: by)
         } else {
-            return await calibre!.listBooks(by: by)
+            if network {
+                return await calibre!.listBooks(by: by)
+            } else {
+                return fallback.listBooks(by: by)
+            }
         }
     }
 }

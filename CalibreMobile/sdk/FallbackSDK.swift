@@ -12,11 +12,11 @@ import Foundation
  */
 
 struct FallbackSDK {
-    func listLibs(server: Server) async -> [String] {
+    func listLibs() -> [String] {
         []
     }
     
-    func listBooks(by: String, server: Server) async -> [Book] {
+    func listBooks(by: String) -> [Book] {
         []
     }
     

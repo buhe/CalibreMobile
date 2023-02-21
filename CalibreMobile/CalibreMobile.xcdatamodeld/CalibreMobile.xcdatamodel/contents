@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="BookCache" representedClassName="BookCache" syncable="YES" codeGenerationType="class"/>
+    <entity name="BookCache" representedClassName="BookCache" syncable="YES" codeGenerationType="class">
+        <attribute name="authors" optional="YES" attributeType="String"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="coverURL" optional="YES" attributeType="String"/>
+        <attribute name="formats" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="publisher" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="LibCache" representedClassName="LibCache" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
