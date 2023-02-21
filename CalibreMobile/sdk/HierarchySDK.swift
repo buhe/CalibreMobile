@@ -25,12 +25,10 @@ class HieratchySDK {
         if timer != nil {
             timer?.invalidate()
         }
-//        let this = self
         if !hasAndSelectDemo {
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {
-//                [weak self] (timer: Timer) in
                 _ in
-                print("定时器已经触发！")
+                print("ping!")
                 do {
                     try self.calibre!.ping()
                     self.network = true
@@ -40,9 +38,6 @@ class HieratchySDK {
                 
             })
         }
-        
-
-
     }
     
     func listLibs() async -> [String] {
