@@ -80,7 +80,7 @@ struct CalibreServerView: View {
             withAnimation {
                 let delete = offsets.map { servers[$0] }
                 delete.forEach{if $0.demo && $0.selected {
-                    viewModel.model.hasAndSelectDemo = false
+                    viewModel.model.sdk.hasAndSelectDemo = false
                     
                 }}
 //                delete.forEach{
@@ -108,7 +108,7 @@ struct CalibreServerView: View {
                 if cluster.name == id {
                     cluster.selected = true
                     if !cluster.demo {
-                        viewModel.model.hasAndSelectDemo = false
+                        viewModel.model.sdk.hasAndSelectDemo = false
                     }
                     
                 } else {

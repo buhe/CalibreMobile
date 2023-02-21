@@ -24,25 +24,25 @@ struct BooksView: View {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]) {
                     ForEach(books) {
                         i in
-                        BookView(book: i)
+                        BookView(viewModel: viewModel, book: i)
                     }
                     
                 }
             }
             .task {
-                self.books =  await CalibreSDK().listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
+                self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
             }
             .onChange(of: viewModel.model.current) {
                 s in
                 Task {
-                    self.books =  await CalibreSDK().listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
+                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
                 }
                 
             }
             .onChange(of: viewModel.model.lib) {
                 s in
                 Task {
-                    self.books =  await CalibreSDK().listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
+                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "", server: viewModel.model.current!)
                 }
                 
             }
@@ -69,20 +69,15 @@ struct BooksView: View {
 }
 
 struct BookView: View {
+    let viewModel: ViewModel
     let book: Book
     
     var body: some View {
         NavigationLink{
-            BookDetailView(book: book)
+            BookDetailView(viewModel: viewModel, book: book)
         } label: {
             VStack {
-                AsyncImage(url: URL(string: book.coverURL)) { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                } placeholder: {
-                    // Placeholder view while the image is loading
-                    ProgressView()
-                }
+                BookImage(viewModel: viewModel, book: book)
                 .shadow(radius: 10)
                 .frame(width: 120, height: 160)
                 .aspectRatio(2/3, contentMode: .fit)

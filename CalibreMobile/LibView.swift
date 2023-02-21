@@ -33,12 +33,12 @@ struct LibView: View {
             }
             .listStyle(PlainListStyle())
             .task {
-                self.libs =  await CalibreSDK().listLibs(server: viewModel.model.current!)
+                self.libs =  await viewModel.model.sdk.listLibs(server: viewModel.model.current!)
             }
             .onChange(of: viewModel.model.current) {
                 s in
                 Task {
-                    self.libs =  await CalibreSDK().listLibs(server: viewModel.model.current!)
+                    self.libs =  await viewModel.model.sdk.listLibs(server: viewModel.model.current!)
                     if !libs.isEmpty {
                         viewModel.model.lib = libs.first!
                     }

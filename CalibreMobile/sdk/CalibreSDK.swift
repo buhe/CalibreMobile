@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct CalibreSDK: SDK{
+struct CalibreSDK {
     func ping() async -> Bool {
         false
     }

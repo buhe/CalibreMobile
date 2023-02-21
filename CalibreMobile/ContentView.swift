@@ -32,7 +32,7 @@ struct ContentView: View {
                 Label("Setting", systemImage: "gear")
             }
         }
-        .background(.red).opacity(0.9)
+//        .background(.red).opacity(0.9)
     }
 }
 

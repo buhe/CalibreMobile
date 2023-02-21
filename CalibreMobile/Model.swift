@@ -28,10 +28,8 @@ struct Model {
     var current: Server?
     
     @AppStorage("libs") var lib: String?
-    var hasAndSelectDemo = false
-    
-    var network = false
-    
+
+    var sdk = HieratchySDK()
     fileprivate func workaroundChinaSpecialBug() {
         let url = URL(string: "https://www.baidu.com")!
         
@@ -77,7 +75,7 @@ struct Model {
                 print("found cluster: \(c)")
                 if c.demo {
                     print("has demo")
-                    hasAndSelectDemo = true
+                    sdk.hasAndSelectDemo = true
                 }
                 
                 if !selectNotSome(c: c) {

@@ -11,7 +11,7 @@ import Foundation
  - Use database when network loss.
  */
 
-struct FallbackSDK: SDK {
+struct FallbackSDK {
     func listLibs(server: Server) async -> [String] {
         []
     }
@@ -19,10 +19,5 @@ struct FallbackSDK: SDK {
     func listBooks(by: String, server: Server) async -> [Book] {
         []
     }
-    
-    func ping() async -> Bool {
-        true
-    }
-    
     
 }
