@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F7AD94A29A5E76C0010471B /* CacheAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7AD94929A5E76C0010471B /* CacheAction.swift */; };
+		3F7AD94D29A5F0170010471B /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3F7AD94C29A5F0170010471B /* SwiftUIX */; };
 		3FC51EDE29A0839400224109 /* CalibreMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */; };
 		3FC51EE029A0839400224109 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EDF29A0839400224109 /* Persistence.swift */; };
 		3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EE129A0839400224109 /* CalibreMobile.xcdatamodeld */; };
@@ -88,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7AD94D29A5F0170010471B /* SwiftUIX in Frameworks */,
 				3FC51F1929A1D82F00224109 /* SwiftyJSON in Frameworks */,
 				3FC51F1129A0F59600224109 /* Alamofire in Frameworks */,
 			);
@@ -211,6 +213,7 @@
 			packageProductDependencies = (
 				3FC51F1029A0F59600224109 /* Alamofire */,
 				3FC51F1829A1D82F00224109 /* SwiftyJSON */,
+				3F7AD94C29A5F0170010471B /* SwiftUIX */,
 			);
 			productName = CalibreMobile;
 			productReference = 3FC51EDA29A0839400224109 /* CalibreMobile.app */;
@@ -287,6 +290,7 @@
 			packageReferences = (
 				3FC51F0F29A0F59600224109 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3FC51F1729A1D82F00224109 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3F7AD94B29A5F0170010471B /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 3FC51EDB29A0839400224109 /* Products */;
 			projectDirPath = "";
@@ -706,6 +710,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3F7AD94B29A5F0170010471B /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3FC51F0F29A0F59600224109 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -725,6 +737,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F7AD94C29A5F0170010471B /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F7AD94B29A5F0170010471B /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
 		3FC51F1029A0F59600224109 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3FC51F0F29A0F59600224109 /* XCRemoteSwiftPackageReference "Alamofire" */;

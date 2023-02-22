@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftUIX
 
 struct BooksView: View {
     @State var books: [Book] = []
     @State var showCalibre = false
+    @State var sorted = "time"
+//    @State var searchText: String = ""
     @ObservedObject var viewModel: ViewModel
-//    @State var network = true
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
@@ -22,9 +24,30 @@ struct BooksView: View {
     @EnvironmentObject var timerWrapper: TimerWrapper
     
 //    @State var network: Bool? = nil
-    
+    func loadBook() async {
+        switch sorted {
+        case "title":
+            self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+        case "time":
+            self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+        case "publisher":
+            self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+        case "auther":
+            self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+        default:
+            self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+        }
+        
+    }
     var body: some View {
         NavigationStack {
+            Picker("Sorted", selection: $sorted){
+                ForEach(["title", "time", "publisher", "auther"], id: \.self) {
+                    Text($0)
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding(.horizontal)
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]) {
                     ForEach(books) {
@@ -35,19 +58,19 @@ struct BooksView: View {
                 }
             }
             .task {
-                self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                await loadBook()
             }
             .onChange(of: viewModel.model.current) {
                 s in
                 Task {
-                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                    await loadBook()
                 }
                 
             }
             .onChange(of: viewModel.model.lib) {
                 s in
                 Task {
-                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                    await loadBook()
                 }
                 
             }
@@ -61,14 +84,14 @@ struct BooksView: View {
                         if viewModel.model.sdk.network {
                             Image(systemName: "alarm")
                                 .task {
-                                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                                    await loadBook()
                                 }
                         } else {
                             Image(systemName: "alarm.waves.left.and.right")
                                 .foregroundColor(.red)
                                 .opacity(0.7)
                                 .task {
-                                    self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                                    await loadBook()
                                 }
                         }
                     }
@@ -79,6 +102,7 @@ struct BooksView: View {
                     showCalibre = false
                 }
             }
+            
 
         }
     }
