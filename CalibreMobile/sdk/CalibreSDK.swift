@@ -16,6 +16,7 @@ struct PingError: Error {
 struct CalibreSDK {
     let server: Server
     let viewContext: NSManagedObjectContext
+    var book: CacheAction<BookCache, Book>
     
     func ping() throws {
         var e: Any? = nil
@@ -79,14 +80,49 @@ struct CalibreSDK {
             let json = try? JSON(data: Data(reps.utf8))
             if let json = json {
                 let metadata = json["metadata"].dictionaryValue
-                result = metadata.sorted(by: {a,b in (a.key.compare(b.key)).rawValue < 0}).map{
+                result = metadata.sorted(by: {a,b in (a.key.compare(b.key)).rawValue > 0}).map{
                     k,v in
-                    Book(id: k,timestamp: v["timestamp"].stringValue, title: v["title"].stringValue, coverURL: "http://\(server.host!):\(server.port!)/get/thumb/\(k)/calibre?sz=600x800", formats: v["formats"].arrayObject as? [String], authors: v["authors"].arrayObject as? [String], tags: v["tags"].arrayObject as? [String], publisher: v["publisher"].stringValue, comments: v["comments"].string)
+                    Book(id: k,timestamp: v["timestamp"].stringValue, title: v["title"].stringValue, coverURL: "http://\(server.host!):\(server.port!)/get/thumb/\(k)/calibre?sz=600x800", formats: v["formats"].arrayObject as? [String], authors: v["authors"].arrayObject as? [String], tags: v["tags"].arrayObject as? [String], publisher: v["publisher"].stringValue, comments: v["comments"].string, cover: Data())
                 }
-//                await addBook(books: result)
+                await book.fill(rest: result, add: addBook, remove: removeBook,transfer: transferBook)
             }
         }
         return result
+    }
+    
+    private func transferBook(books: [BookCache]) -> [String] {
+        books.map{$0.id!}
+    }
+    
+    private func removeBook(ids: Set<String>) {
+        // 创建 NSFetchRequest 对象，设置查询条件
+        for id in ids {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BookCache")
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+
+            // 获取需要删除的记录
+            guard let records = try? viewContext.fetch(fetchRequest) as? [NSManagedObject] else {
+                return
+            }
+
+            // 删除记录
+            for record in records {
+                viewContext.delete(record)
+            }
+        }
+        
+
+        // 保存更改
+        
+
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
     
     private func addBook(books: [Book]) async {

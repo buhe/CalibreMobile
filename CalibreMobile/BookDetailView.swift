@@ -39,7 +39,7 @@ struct BookDetailView: View {
 
 struct BookDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailView(viewModel: ViewModel(viewContext: PersistenceController.preview.container.viewContext), book: Book(id: "1", timestamp: "2023", title: "1234567890qwertyuiopkjhgfdsazxcvbnm,.1234567890-][poiiuytrreewwqqasdfghjkl;'/.,mnbvcxcz", coverURL: "http://192.168.31.60:8080/get/thumb/1/calibre?sz=600x800", formats: [],authors: ["abc"],tags: [],publisher: "123",comments: "1234567890abcdf"))
+        BookDetailView(viewModel: ViewModel(viewContext: PersistenceController.preview.container.viewContext), book: Book(id: "1", timestamp: "2023", title: "1234567890qwertyuiopkjhgfdsazxcvbnm,.1234567890-][poiiuytrreewwqqasdfghjkl;'/.,mnbvcxcz", coverURL: "http://192.168.31.60:8080/get/thumb/1/calibre?sz=600x800", formats: [],authors: ["abc"],tags: [],publisher: "123",comments: "1234567890abcdf", cover: Data()))
     }
 }
 

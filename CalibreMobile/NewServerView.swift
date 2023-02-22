@@ -47,6 +47,15 @@ struct NewServerView: View {
                     Text("Save")
                 }
             }
+            
+            Section {
+                Button{
+                    
+                    
+                } label: {
+                    Text("Test")
+                }
+            }
         }
         .alert(errorMessage, isPresented: $showErrorMessage){
             Button("OK", role: .cancel) {

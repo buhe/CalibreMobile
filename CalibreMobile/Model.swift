@@ -20,6 +20,11 @@ struct Book: Identifiable {
     let publisher: String?
     let comments: String?
 
+    let cover: Data
+}
+
+struct Lib: Identifiable {
+    let id: String
 }
 
 struct Model {
@@ -29,13 +34,14 @@ struct Model {
         didSet {
             print("Monitor sever: \(self.current!)")
             // ping new server
-            self.sdk.newServer(server: self.current!, viewContext: viewContext)
+            self.sdk.newServer(server: self.current!)
         }
     }
     
     @AppStorage("libs") var lib: String?
 
-    var sdk = HieratchySDK()
+    var sdk: HieratchySDK
+    
     fileprivate func workaroundChinaSpecialBug() {
         let url = URL(string: "https://www.baidu.com")!
         
@@ -96,6 +102,7 @@ struct Model {
     
     init(viewContext: NSManagedObjectContext) {
         self.viewContext = viewContext
+        self.sdk = HieratchySDK(viewContext: viewContext)
         if first {
             workaroundChinaSpecialBug()
             first = false

@@ -15,14 +15,24 @@ class HieratchySDK {
     
     var calibre: CalibreSDK?
     
-    var fallback = FallbackSDK()
+    var fallback: FallbackSDK
     
     var demo = DemoSDK()
     
     var timer: Timer?
     
-    func newServer(server: Server, viewContext: NSManagedObjectContext) {
-        calibre = CalibreSDK(server: server, viewContext: viewContext)
+    var book: CacheAction<BookCache, Book>
+    
+    let viewContext: NSManagedObjectContext
+    
+    init(viewContext: NSManagedObjectContext) {
+        self.viewContext = viewContext
+        self.book = CacheAction<BookCache, Book>(viewContext: viewContext, key: "BookCache")
+        self.fallback = FallbackSDK(book: book)
+    }
+    
+    func newServer(server: Server) {
+        calibre = CalibreSDK(server: server, viewContext: viewContext, book: book)
         if timer != nil {
             timer?.invalidate()
         }

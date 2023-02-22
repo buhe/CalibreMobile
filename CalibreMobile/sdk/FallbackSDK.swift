@@ -12,12 +12,22 @@ import Foundation
  */
 
 struct FallbackSDK {
+    var book: CacheAction<BookCache, Book>
+    
+    init(book: CacheAction<BookCache, Book>) {
+        self.book = book
+        book.load()
+    }
+    
     func listLibs() -> [String] {
         []
     }
     
     func listBooks(by: String) -> [Book] {
-        []
+        book.memory.sorted(by: {$0.id! > $1.id!}).map{
+            cache in
+            Book(id: cache.id ?? "", timestamp: cache.timestamp ?? "", title: cache.title ?? "", coverURL: "", formats: [], authors: [], tags: [], publisher: cache.publisher ?? "", comments: cache.comments ?? "", cover: cache.cover ?? Data())
+        }
     }
     
 }

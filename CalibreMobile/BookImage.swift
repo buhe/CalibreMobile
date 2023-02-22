@@ -15,12 +15,22 @@ struct BookImage: View {
             Image(book.id)
                 .resizable()
         } else {
-            AsyncImage(url: URL(string: book.coverURL)) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-            } placeholder: {
-                // Placeholder view while the image is loading
-                ProgressView()
+            if viewModel.model.sdk.network {
+                AsyncImage(url: URL(string: book.coverURL)) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    // Placeholder view while the image is loading
+                    ProgressView()
+                }
+            } else {
+                if let uiImage = UIImage(data: book.cover) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                } else {
+                    ProgressView()
+                }
             }
         }
     }
