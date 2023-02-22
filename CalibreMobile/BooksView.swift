@@ -28,12 +28,16 @@ struct BooksView: View {
         switch sorted {
         case "title":
             self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                .sorted(by: {$0.title < $1.title})
         case "time":
             self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                .sorted(by: {$0.timestamp < $1.timestamp})
         case "publisher":
             self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                .sorted(by: {$0.publisher ?? "" < $1.publisher ?? ""})
         case "auther":
             self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
+                .sorted(by: {$0.authors?.first ?? "" < $1.authors?.first ?? ""})
         default:
             self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
         }
@@ -48,6 +52,7 @@ struct BooksView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.horizontal)
+            
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]) {
                     ForEach(books) {
@@ -78,6 +83,12 @@ struct BooksView: View {
                     await loadBook()
                 }
                 
+            }
+            .onChange(of: sorted){
+                s in
+                Task {
+                    await loadBook()
+                }
             }
             .navigationTitle("Book")
             .toolbar{
