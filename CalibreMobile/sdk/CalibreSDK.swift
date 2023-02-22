@@ -84,7 +84,7 @@ struct CalibreSDK {
                     k,v in
                     Book(id: k,timestamp: v["timestamp"].stringValue, title: v["title"].stringValue, coverURL: "http://\(server.host!):\(server.port!)/get/thumb/\(k)/calibre?sz=600x800", formats: v["formats"].arrayObject as? [String], authors: v["authors"].arrayObject as? [String], tags: v["tags"].arrayObject as? [String], publisher: v["publisher"].stringValue, comments: v["comments"].string, cover: Data())
                 }
-                await book.fill(rest: result, add: addBook, remove: removeBook,transfer: transferBook)
+//                await book.fill(rest: result, add: addBook, remove: removeBook,transfer: transferBook)
             }
         }
         return result
