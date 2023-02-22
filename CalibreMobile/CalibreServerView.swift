@@ -18,8 +18,15 @@ struct CalibreServerView: View {
     
     @State var showNewServer = false
     @State var selectedItem: String?
+    @State var showHelp = false
+    
     var body: some View {
         HStack {
+            Button {
+                showHelp = true
+            }label: {
+                Image(systemName: "questionmark.circle")
+            }
             Spacer()
             Button{
                 showNewServer = true
@@ -38,6 +45,9 @@ struct CalibreServerView: View {
                 .environment(\.managedObjectContext, viewContext)
         }
         .padding()
+        .sheet(isPresented: $showHelp){
+            CalibreHelpView()
+        }
         List(selection: $selectedItem)  {
             ForEach(servers.map{ServerConfig(id: $0.name!, name: $0.name!, icon:
                                             $0.icon!, selected: $0.selected )}) {
@@ -141,6 +151,41 @@ private struct ServerConfig: Identifiable, Hashable {
     let name: String
     let icon: String
     let selected: Bool
+}
+
+struct CalibreHelpView: View {
+    var body: some View {
+        VStack(alignment: .leading){
+            Text("How do I use calibre with my iPad/iPhone/iPod touch?")
+                .font(.title)
+                .padding(.vertical)
+            Text("""
+                An easy way to browse your calibre collection from your Apple device is by using The calibre Content server, which makes your collection available over the net. First perform the following steps in calibre
+
+                Set the Preferred Output Format in calibre to EPUB (The output format can be set under Preferences → Interface → Behavior)
+
+                Set the output profile to iPad (this will work for iPhone/iPods as well), under Preferences → Conversion → Common options → Page setup
+
+                Convert the books you want to read on your iDevice to EPUB format by selecting them and clicking the Convert button.
+
+                Turn on the Content server by clicking the Connect/share button and leave calibre running. You can also tell calibre to automatically start the Content server via Preferences → Sharing → Sharing over the net.
+
+                The Content server allows you to read books directly in Safari itself. In addition, there are many apps for your iDevice that can connect to the calibre Content server.
+                """)
+            Text("Using the Content server with this app")
+                .font(.title)
+                .padding(.vertical)
+            Text("""
+                Click the plus button, enter the correct IP and port of the content server.
+                
+                Click the Test button to ensure that the IP and port are correct, and then click the Save button.
+                """)
+            Spacer()
+        }
+        .padding()
+        
+        
+    }
 }
 
 struct CalibreServerView_Previews: PreviewProvider {
