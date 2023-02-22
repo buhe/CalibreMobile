@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F7AD94829A5A24D0010471B /* CacneAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7AD94729A5A24D0010471B /* CacneAction.swift */; };
+		3F7AD94A29A5E76C0010471B /* CacheAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7AD94929A5E76C0010471B /* CacheAction.swift */; };
 		3FC51EDE29A0839400224109 /* CalibreMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */; };
 		3FC51EE029A0839400224109 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EDF29A0839400224109 /* Persistence.swift */; };
 		3FC51EE329A0839400224109 /* CalibreMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51EE129A0839400224109 /* CalibreMobile.xcdatamodeld */; };
@@ -53,7 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F7AD94729A5A24D0010471B /* CacneAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacneAction.swift; sourceTree = "<group>"; };
+		3F7AD94929A5E76C0010471B /* CacheAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAction.swift; sourceTree = "<group>"; };
 		3FC51EDA29A0839400224109 /* CalibreMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalibreMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibreMobileApp.swift; sourceTree = "<group>"; };
 		3FC51EDF29A0839400224109 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -113,6 +113,7 @@
 		3FC51ED129A0839400224109 = {
 			isa = PBXGroup;
 			children = (
+				3F7AD94929A5E76C0010471B /* CacheAction.swift */,
 				3FC51EDC29A0839400224109 /* CalibreMobile */,
 				3FC51EF329A0839500224109 /* CalibreMobileTests */,
 				3FC51EFD29A0839500224109 /* CalibreMobileUITests */,
@@ -135,7 +136,6 @@
 			children = (
 				3FC51F1229A1D3B400224109 /* sdk */,
 				3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */,
-				3F7AD94729A5A24D0010471B /* CacneAction.swift */,
 				3FC51EDF29A0839400224109 /* Persistence.swift */,
 				3FC51EE429A0839400224109 /* ContentView.swift */,
 				3FC51EE629A0839500224109 /* Assets.xcassets */,
@@ -332,12 +332,12 @@
 			files = (
 				3FC51F2129A1EEE200224109 /* ViewModel.swift in Sources */,
 				3FC51EDE29A0839400224109 /* CalibreMobileApp.swift in Sources */,
-				3F7AD94829A5A24D0010471B /* CacneAction.swift in Sources */,
 				3FC51F1B29A1DC3A00224109 /* LibView.swift in Sources */,
 				3FC51EE029A0839400224109 /* Persistence.swift in Sources */,
 				3FC51F2B29A3543300224109 /* DemoSDK.swift in Sources */,
 				3FC51F2929A3143C00224109 /* NewServerView.swift in Sources */,
 				3FC51F2529A2375300224109 /* BookDetailView.swift in Sources */,
+				3F7AD94A29A5E76C0010471B /* CacheAction.swift in Sources */,
 				3FE45A0529A4685B004716BD /* HierarchySDK.swift in Sources */,
 				3FC51F1F29A1DC6E00224109 /* SettingView.swift in Sources */,
 				3FC51EE529A0839400224109 /* ContentView.swift in Sources */,
