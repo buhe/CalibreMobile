@@ -113,7 +113,6 @@
 		3FC51ED129A0839400224109 = {
 			isa = PBXGroup;
 			children = (
-				3F7AD94929A5E76C0010471B /* CacheAction.swift */,
 				3FC51EDC29A0839400224109 /* CalibreMobile */,
 				3FC51EF329A0839500224109 /* CalibreMobileTests */,
 				3FC51EFD29A0839500224109 /* CalibreMobileUITests */,
@@ -134,6 +133,7 @@
 		3FC51EDC29A0839400224109 /* CalibreMobile */ = {
 			isa = PBXGroup;
 			children = (
+				3F7AD94929A5E76C0010471B /* CacheAction.swift */,
 				3FC51F1229A1D3B400224109 /* sdk */,
 				3FC51EDD29A0839400224109 /* CalibreMobileApp.swift */,
 				3FC51EDF29A0839400224109 /* Persistence.swift */,
