@@ -50,8 +50,13 @@ struct NewServerView: View {
             
             Section {
                 Button{
-                    
-                    
+                    do {
+                        try ping(host: host, port: port)
+                        errorMessage = "Server status is OK."
+                    } catch {
+                        errorMessage = "Server status is down."
+                    }
+                    showErrorMessage = true
                 } label: {
                     Text("Test")
                 }
@@ -101,6 +106,21 @@ struct NewServerView: View {
             
         
         close(newItem.name!)
+    }
+    
+    func ping(host: String, port: String) throws {
+        var e: Any? = nil
+        let semaphore = DispatchSemaphore(value: 0)
+        let url = URL(string: "http://\(host):\(port)/interface-data/update")!
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            e = error
+            semaphore.signal()
+        }
+        task.resume()
+        semaphore.wait()
+        if e != nil {
+            throw PingError()
+        }
     }
     
 }
