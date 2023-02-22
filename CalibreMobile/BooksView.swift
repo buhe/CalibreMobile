@@ -57,6 +57,11 @@ struct BooksView: View {
                     
                 }
             }
+            .refreshable {
+                Task {
+                    await loadBook()
+                }
+            }
             .task {
                 await loadBook()
             }
