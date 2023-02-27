@@ -78,10 +78,10 @@ struct Model {
     }
     
     mutating func select(viewContext: NSManagedObjectContext) {
-        var clusters = try! viewContext.fetch(NSFetchRequest(entityName: "Server")) as! [Server]
-        if clusters.isEmpty {
-            addDemo(viewContext, &clusters)
-        }
+        let clusters = try! viewContext.fetch(NSFetchRequest(entityName: "Server")) as! [Server]
+//        if clusters.isEmpty {
+//            addDemo(viewContext, &clusters)
+//        }
         for c in clusters {
             if c.selected {
                 print("found cluster: \(c)")
