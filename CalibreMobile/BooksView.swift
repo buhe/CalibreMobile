@@ -95,7 +95,7 @@ struct BooksView: View {
                 ToolbarItem(placement: .navigationBarTrailing){
                     HStack{
                         Button{showCalibre = true}label: {
-                            Image(systemName: servers.filter{$0.selected}.first?.icon! ?? "0.circle")
+                            Image(systemName: servers.filter{$0.selected}.first?.icon! ?? "server.rack")
                         }
                         if viewModel.model.sdk.network {
                             Image(systemName: "alarm")
