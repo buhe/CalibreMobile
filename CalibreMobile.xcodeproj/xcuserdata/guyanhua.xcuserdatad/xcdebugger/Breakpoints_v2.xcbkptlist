@@ -77,8 +77,8 @@
             filePath = "CalibreMobile/sdk/CalibreSDK.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "listBooks(by:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -93,8 +93,8 @@
             filePath = "CalibreMobile/sdk/CalibreSDK.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "listBooks(by:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -208,6 +208,323 @@
             endingLineNumber = "25"
             landmarkName = "fill(rest:add:remove:transfer:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A42F624F-F5DD-49A0-8034-0CA66B15201C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalibreMobile/CalibreMobileApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "start(withTimeInterval:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A42F624F-F5DD-49A0-8034-0CA66B15201C - 6fe5187d0ceeeedb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalibreMobile.TimerWrapper.start(withTimeInterval: Swift.Double) -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/CalibreMobileApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "A42F624F-F5DD-49A0-8034-0CA66B15201C - 9aa4fb5c9933b55f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async -&gt; () in CalibreMobile.TimerWrapper.start(withTimeInterval: Swift.Double) -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/CalibreMobileApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "A42F624F-F5DD-49A0-8034-0CA66B15201C - cb440f58a3db018a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in CalibreMobile.TimerWrapper.start(withTimeInterval: Swift.Double) -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/CalibreMobileApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7289BE10-9217-4B32-8946-8DBAF616D6DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalibreMobile/CalibreServerView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "selectItem(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7289BE10-9217-4B32-8946-8DBAF616D6DC - 39313efb53576f0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in CalibreMobile.CalibreServerView.selectItem(id: Swift.String) -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/CalibreServerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "596">
+               </Location>
+               <Location
+                  uuid = "7289BE10-9217-4B32-8946-8DBAF616D6DC - 39313efb53576f0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in CalibreMobile.CalibreServerView.selectItem(id: Swift.String) -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/CalibreServerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "1116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BC785B3-9CED-4F1E-9F22-25B872359859"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalibreMobile/Model.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "current"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA768B92-5BDE-443E-9E20-71171C998B80"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalibreMobile/sdk/CalibreSDK.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "ping()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "159CACA0-06A2-47F9-8B81-3FC4715F949C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalibreMobile/sdk/HierarchySDK.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "newServer(server:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "159CACA0-06A2-47F9-8B81-3FC4715F949C - 1f3a2b5845e52bc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (__C.NSTimer) -&gt; () in CalibreMobile.HieratchySDK.newServer(server: CalibreMobile.Server) -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/sdk/HierarchySDK.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "159CACA0-06A2-47F9-8B81-3FC4715F949C - e860a941d951def0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Sendable (__C.NSTimer) -&gt; () in CalibreMobile.HieratchySDK.newServer(server: CalibreMobile.Server) -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/sdk/HierarchySDK.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "159CACA0-06A2-47F9-8B81-3FC4715F949C - 86967fbc8e5dc138"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Sendable (__C.NSTimer) -&gt; () in CalibreMobile.HieratchySDK.newServer(server: CalibreMobile.Server) -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/sdk/HierarchySDK.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "159CACA0-06A2-47F9-8B81-3FC4715F949C - 5ed38c838436bac6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 @Sendable (__C.NSTimer) -&gt; () in CalibreMobile.HieratchySDK.newServer(server: CalibreMobile.Server) -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/sdk/HierarchySDK.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79B9AAB1-00E5-419C-83FB-22B696119D3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalibreMobile/sdk/CalibreSDK.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "ping()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "79B9AAB1-00E5-419C-83FB-22B696119D3A - fd9b9667b0e01a9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CalibreMobile.CalibreSDK.ping() async -&gt; Swift.Bool"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/sdk/CalibreSDK.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "79B9AAB1-00E5-419C-83FB-22B696119D3A - 3ab1f96c653cb39f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CalibreMobile.CalibreSDK.ping() async -&gt; Swift.Bool"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/sdk/CalibreSDK.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7CB01AEA-6767-430D-BCDB-81799458FAED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalibreMobile/sdk/CalibreSDK.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "ping()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7CB01AEA-6767-430D-BCDB-81799458FAED - fd9b9667b0e0197d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CalibreMobile.CalibreSDK.ping() async -&gt; Swift.Bool"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/sdk/CalibreSDK.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "7CB01AEA-6767-430D-BCDB-81799458FAED - 3ab1f96c653cb07e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CalibreMobile.CalibreSDK.ping() async -&gt; Swift.Bool"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/sdk/CalibreSDK.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

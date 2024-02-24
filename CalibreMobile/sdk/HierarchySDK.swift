@@ -39,15 +39,17 @@ class HieratchySDK {
         if !hasAndSelectDemo {
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {
                 _ in
-                print("ping!")
-                do {
-                    try self.calibre!.ping()
-                    self.network = true
-                } catch{
-                    self.network = false
+                Task {
+                    print("ping!")
+                    if await self.calibre!.ping(){
+                        self.network = true
+                    } else {
+                        
+                        self.network = false
+                    }
                 }
-                
-            })
+            }
+            )
         }
     }
     

@@ -18,18 +18,30 @@ struct CalibreSDK {
     let viewContext: NSManagedObjectContext
     var book: CacheAction<BookCache, Book>
     
-    func ping() throws {
-        var e: Any? = nil
-        let semaphore = DispatchSemaphore(value: 0)
-        let url = URL(string: "http://\(server.host!):\(server.port!)/interface-data/update")!
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            e = error
-            semaphore.signal()
-        }
-        task.resume()
-        semaphore.wait()
-        if e != nil {
-            throw PingError()
+    func ping() async -> Bool {
+//        var e: Any? = nil
+//        let semaphore = DispatchSemaphore(value: 0)
+//        let url = URL(string: "http://\(server.host!):\(server.port!)/interface-data/update")!
+//        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+//            e = error
+//            semaphore.signal()
+//        }
+//        task.resume()
+//        semaphore.wait()
+//        if e != nil {
+//            throw PingError()
+//        }
+        if let host = server.host, let port = server.port {
+            let reps = try? await  AF.request("http://\(host):\(port)/interface-data/update").serializingString().value
+            if reps != nil {
+                    print("API accessed")
+                return true
+                } else {
+                    print("API not accessed")
+                    return false
+                }
+        } else {
+            return false
         }
     }
     
