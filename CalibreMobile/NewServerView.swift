@@ -50,11 +50,13 @@ struct NewServerView: View {
             
             Section {
                 Button{
-                    do {
-                        try ping(host: host, port: port)
-                        errorMessage = "Server status is OK."
-                    } catch {
-                        errorMessage = "Server status is down."
+                    if check() {
+                        do {
+                            try ping(host: host, port: port)
+                            errorMessage = "Server status is OK."
+                        } catch {
+                            errorMessage = "Server status is down."
+                        }
                     }
                     showErrorMessage = true
                 } label: {
@@ -68,24 +70,27 @@ struct NewServerView: View {
             }
         }
     }
-    
-    private func addItem() {
+    private func check() -> Bool {
         if name.isEmpty {
             showErrorMessage = true
-            errorMessage = "Input cluster name, please."
-            return
+            errorMessage = "Input calibre server name, please."
+            return false
         }
         if host.isEmpty {
             showErrorMessage = true
             errorMessage = "Import calibre host, please."
-            return
+            return false
         }
         if port.isEmpty {
             showErrorMessage = true
             errorMessage = "Import calibre port, please."
-            return
+            return false
         }
-        
+        return true
+    }
+    private func addItem() {
+
+        if check() {
             let newItem = Server(context: viewContext)
             newItem.name = name
             newItem.icon = icon
@@ -94,7 +99,7 @@ struct NewServerView: View {
             if firstServer {
                 newItem.selected = true
             }
-
+            
             do {
                 try viewContext.save()
             } catch {
@@ -103,9 +108,9 @@ struct NewServerView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
-            
+            close(newItem.name!)
+        }
         
-        close(newItem.name!)
     }
     
     func ping(host: String, port: String) throws {

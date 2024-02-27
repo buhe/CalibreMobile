@@ -527,5 +527,101 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "581C2B9D-CE13-474E-A307-ECDEB91150BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalibreMobile/NewServerView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "addItem()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "581C2B9D-CE13-474E-A307-ECDEB91150BD - a7d2317b8d6f6dbc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalibreMobile.NewServerView.addItem() -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/NewServerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "581C2B9D-CE13-474E-A307-ECDEB91150BD - a7d2317b8d6f6ec8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalibreMobile.NewServerView.addItem() -&gt; ()"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/NewServerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A73AEFE5-F29B-4C13-BD20-B357711C66D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalibreMobile/NewServerView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "A73AEFE5-F29B-4C13-BD20-B357711C66D0 - f0e6f911821da006"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #3 () -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.textInputAutocapitalization(Swift.Optional&lt;SwiftUI.TextInputAutocapitalization&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Picker&lt;SwiftUI.Text, Swift.String, SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI.Image&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.textInputAutocapitalization(Swift.Optional&lt;SwiftUI.TextInputAutocapitalization&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.textInputAutocapitalization(Swift.Optional&lt;SwiftUI.TextInputAutocapitalization&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.EmptyView&gt;, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.EmptyView&gt;)&gt; in CalibreMobile.NewServerView.body.getter : some"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/NewServerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "A73AEFE5-F29B-4C13-BD20-B357711C66D0 - f0e6f911821da027"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #3 () -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.textInputAutocapitalization(Swift.Optional&lt;SwiftUI.TextInputAutocapitalization&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Picker&lt;SwiftUI.Text, Swift.String, SwiftUI.ForEach&lt;Swift.Array&lt;Swift.String&gt;, Swift.String, SwiftUI.Image&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.textInputAutocapitalization(Swift.Optional&lt;SwiftUI.TextInputAutocapitalization&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.textInputAutocapitalization(Swift.Optional&lt;SwiftUI.TextInputAutocapitalization&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.EmptyView&gt;, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.EmptyView&gt;)&gt; in CalibreMobile.NewServerView.body.getter : some"
+                  moduleName = "CalibreMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/CalibreMobile/CalibreMobile/NewServerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
