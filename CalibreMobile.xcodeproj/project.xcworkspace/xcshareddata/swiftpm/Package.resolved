@@ -1,4 +1,5 @@
 {
+  "originHash" : "fd621f5a98cdb219189d49d51559c0e5179dd7265f3fc7b5c8cc86cd57ec3eca",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -15,7 +16,7 @@
       "location" : "https://github.com/SwiftUIX/SwiftUIX",
       "state" : {
         "branch" : "master",
-        "revision" : "914d152449be42cf0005a2b9dc8fda17c046c942"
+        "revision" : "56175334751a03f80d3a650c497b8525237d4e43"
       }
     },
     {
@@ -28,5 +29,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
