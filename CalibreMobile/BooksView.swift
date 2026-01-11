@@ -35,7 +35,7 @@ struct BooksView: View {
         case "publisher":
             self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
                 .sorted(by: {$0.publisher ?? "" < $1.publisher ?? ""})
-        case "auther":
+        case "author":
             self.books =  await viewModel.model.sdk.listBooks(by: viewModel.model.lib ?? "")
                 .sorted(by: {$0.authors?.first ?? "" < $1.authors?.first ?? ""})
         default:
@@ -46,7 +46,7 @@ struct BooksView: View {
     var body: some View {
         NavigationStack {
             Picker("Sorted", selection: $sorted){
-                ForEach(["title", "time", "publisher", "auther"], id: \.self) {
+                ForEach(["title", "time", "publisher", "author"], id: \.self) {
                     Text($0)
                 }
             }
